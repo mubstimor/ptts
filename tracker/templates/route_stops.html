@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block pagetitle %}Route Stops{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        	<div class="wrap">
+            	<div class="container">
+                    <a href="/">Home</a> / <a href="/routes">Registered Routes</a><span>/</span>Route Stops
+            </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block main_content %}
+    <div class="wrap">
+        	<div class="container">
+               <section>
+               <div class="row">
+                        <div class="span11">
+                  <div class="page-header">
+                    <h2 class="title"><span>Route Stops</span></h2>
+                  </div>
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Stop name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for route_stop in route_stops %}
+                      <tr>
+                        <td>{{ route_stop.id }}</td>
+                        <td>{{ route_stop.stop_name }}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                        </div>
+               </div>
+                </section>
+
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block pagetitle %}Home{% endblock %}
+
+{% block slider %}
+<div id="main_slider">
+    <div class="camera_wrap" id="camera_wrap_1">
+        <div data-src="static/img/slider/1.png"></div>
+        <div data-src="static/img/slider/2.png"></div>
+        <div data-src="static/img/slider/3.png"></div>
+    </div><!-- #camera_wrap_1 -->
+    <div class="clear"></div>
+</div>
+{% endblock %}
+
+{% block planning %}
+<div class="wrap planning">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <a href="#">
+                        	<span class="img_icon icon1"></span>
+                            <span class="link_title">Android</span>
+                        	Get the latest updates using an android device of version 3.0 or later.
+                        </a>
+                    </div>
+                    <div class="span3">
+                        <a href="#">
+                        	<span class="img_icon icon2"></span>
+                            <span class="link_title">Web</span>
+                        	Search for routes and access details about the bus schedules from any device with Internet access.
+                        </a>
+                    </div>
+                    <div class="span4">
+                        <a href="#">
+                        	<span class="img_icon icon4"></span>
+                            <span class="link_title">Keywords</span>
+                        	Low end phones could optionally access the system's functionality by sending requests to 7197.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block welcome %}
+       <!--Welcome-->
+        <div class="wrap block">
+            <div class="container welcome_block">
+            	<div class="welcome_line welcome_t"></div>
+            	Need to know where the nearest bus u can board is?<span>Welcome to Tracker where You now can!</span>
+                <div class="welcome_line welcome_b"></div>
+            </div>
+        </div>
+        <!--//Welcome-->
+{% endblock %}

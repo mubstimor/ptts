@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block pagetitle %}Registered Routes{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        	<div class="wrap">
+            	<div class="container">
+                    <a href="/">Home</a><span>/</span>Registered Routes
+            </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block main_content %}
+    <div class="wrap">
+        	<div class="container">
+               <section>
+                 <div class="row">
+                        <div class="span11">
+                  <div class="page-header">
+                    <h2 class="title"><span>Registered Routes</span></h2>
+                  </div>
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Route</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for route in routes %}
+                      <tr>
+                        <td>{{ route.id }}</td>
+                        <td><a href="stops/get/{{ route.id }}/">{{ route.route_name }}</a></td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                        </div>
+                 </div>
+                </section>
+
+            </div>
+        </div>
+{% endblock %}
