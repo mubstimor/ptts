@@ -59,7 +59,7 @@ STATIC_ROOT = ''
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/tracker/static/'
+STATIC_URL = '/static/'
 
 # List of finder classes that know how to find static files in
 # various locations.
