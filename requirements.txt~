@@ -23,8 +23,8 @@ djangorestframework==2.3.13
 easy-thumbnails==1.5
 html5lib==0.999
 psycopg2==2.5.3
-pycurl==7.19.3
 six==1.2.0
 twitter==1.9.1
 virtualenv==1.11.4
 wsgiref==0.1.2
+gunicorn==0.13.4 
