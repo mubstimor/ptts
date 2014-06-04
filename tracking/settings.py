@@ -12,16 +12,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 import dj_database_url
 
-from django.core.exceptions import ImproperlyConfigured
-
-def get_env_variable(var_name):
-    """ Get the environment variable or return exception """
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        error_msg = "Set the %s environment variable" % var_name
-        raise ImproperlyConfigured(error_msg)
-
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -32,57 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '8q)yk^s4y&&qa1nh+ckzb(+^q6+dn99%-*g$w-n6z-m8$=q8k1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_env_variable("DJANGO_DEBUG")
-if DEBUG == 1 or DEBUG == '1':
-    DEBUG = True
-else:
-    DEBUG = False
-    
-LOCAL_DEV = get_env_variable("DJANGO_LOCAL_DEV")
-if LOCAL_DEV == 1 or LOCAL_DEV == '1':
-    LOCAL_DEV = True
-else:
-    LOCAL_DEV = False
-
-if DEBUG:
-    DEBUG_TOOLBAR_PANELS = ( ...settings...   )
-    #...other DEBUG settings ....
-
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-
-DATABASES = {}
+DEBUG = True
 
 TEMPLATE_DEBUG = True
-
-if LOCAL_DEV:
-    ALLOWED_HOSTS = ['*'] #useful when testing with DEBUG = FALSE
-    INTERNAL_IPS = ('127.0.0.1',) #sets local IPS needed for DEBUG_TOOLBAR and other items.
-
-    DATABASES = {
-        'default': {         
-            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
-    # Parse database configuration from $DATABASE_URL
-    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-    
-    # Honor the 'X-Forwarded-Proto' header for request.is_secure()
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-#default settings
-DEFAULT_FROM_EMAIL = get_env_variable("DJANGO_EMAIL_DEFAULT_USER")
-
-SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
 
 ALLOWED_HOSTS = []
 
@@ -117,17 +59,14 @@ STATIC_ROOT = ''
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT,'staticfiles/')
-# URL prefix for static files.
-# Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-#STATICFILES_DIRS = (
-#    # I have the static folder inside my app and not inside the project
-#    os.path.join(BASE_DIR, 'static'),
-#)
+STATICFILES_DIRS = (
+    # I have the static folder inside my app and not inside the project
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -212,6 +151,19 @@ SUIT_CONFIG = {
 ROOT_URLCONF = 'tracking.urls'
 
 WSGI_APPLICATION = 'tracking.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
