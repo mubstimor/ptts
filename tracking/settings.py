@@ -60,12 +60,11 @@ STATIC_ROOT = ''
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = ''
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
-    # I have the static folder inside my app and not inside the project
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(os.path.abspath(os.path.dirname(__file__) + '/..'), 'static'),
 )
 
 # List of finder classes that know how to find static files in
