@@ -65,7 +65,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
     # I have the static folder inside my app and not inside the project
-    os.path.join(BASE_DIR, 'tracker/static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # List of finder classes that know how to find static files in
