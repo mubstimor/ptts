@@ -3,6 +3,7 @@
             	<div class="container">
                     <div class="row">
                         <div class="span3">
+				{% load staticfiles %}
                         	<div class="logo"><a href="/"><img src="{% static "tracker/logo.png" %}" alt="Logo" /></a></div>
                         </div>
                         <div class="span8">
