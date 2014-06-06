@@ -9,6 +9,7 @@ admin.autodiscover()
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'routes', views.RouteViewSet)
 
 urlpatterns = patterns('',
     url(r'^$', 'tracker.views.home', name='home'),

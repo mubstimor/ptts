@@ -6,7 +6,7 @@ from django.template import RequestContext
 from rest_framework import viewsets
 from tracker.forms import ContactForm
 from tracker.models import *
-from tracker.serializers import UserSerializer, GroupSerializer
+from tracker.serializers import UserSerializer, GroupSerializer, RouteSerializer
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
@@ -87,5 +87,10 @@ class GroupViewSet(viewsets.ModelViewSet):
      """
      queryset = Group.objects.all()
      serializer_class = GroupSerializer
-     serializer_class = GroupSerializer
-     serializer_class = GroupSerializer
+
+class RouteViewSet(viewsets.ModelViewSet):
+     """
+     API endpoint that allows routes to be viewed or edited.
+     """
+     queryset = Route.objects.all()
+     serializer_class = RouteSerializer
