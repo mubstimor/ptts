@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^get_started', 'tracker.views.get_started', name='get_started'),
     url(r'^route_stops/(?P<route_id>\d+)/$', 'tracker.views.route_stops' , name='route_stops'),
     url(r'^stops/get/(?P<route_id>\d+)/$', 'tracker.views.route_stops' , name='route_stops'),
+    url(r'^rstops', 'tracker.views.rstops', name='rstops'),
 
     # url(r'^blog/', include('blog.urls')),
 

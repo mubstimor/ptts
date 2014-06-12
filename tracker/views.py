@@ -70,6 +70,9 @@ def find_bus(request):
     variables = RequestContext(request,{"routes":route})
     return render_to_response("find_bus.html", variables)
 
+def rstops(request, route_id=1):
+    return ('find_bus.html', {'route_stops': Route_Stop.objects.filter(id = route_id) })
+
 def get_started(request):
     return render_to_response("get_started.html")
 

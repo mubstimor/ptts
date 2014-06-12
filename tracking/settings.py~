@@ -66,9 +66,8 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'tracker/static'),
+    os.path.join(BASE_DIR, 'static'),
 )
-
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -165,7 +164,18 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 #    }
 #}
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+import socket
+if socket.gethostname() == '127.0.0.1:8000':
+    #Development Server Settings go here
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
+else:
+    #Production Server Settings go here
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
@@ -175,10 +185,10 @@ REST_FRAMEWORK = {
 
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
-        'rest_framework.permissions.IsAdminUser'
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    #     'rest_framework.permissions.IsAdminUser'
+    # ],
 
     'PAGINATE_BY': 10,
 }

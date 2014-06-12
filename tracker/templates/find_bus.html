@@ -18,27 +18,64 @@
                      <div class="row">
                         <div class="span7">
                             <h2 class="title"><span>Route Map</span></h2>
+                                <script type="text/javascript" src="../static/js/jQuery1.3.js"></script>
+                              <script type="text/javascript">
+                                      var locations = [
+                              ['Bondi Beach', -33.890542, 151.274856, 4],
+                              ['Coogee Beach', -33.923036, 151.259052, 5],
+                              ['Cronulla Beach', -34.028249, 151.157507, 3],
+                              ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+                              ['Maroubra Beach', -33.950198, 151.259302, 1]
+                            ];
 
-								<script type="text/javascript">
-									function initialize() {
-										var mapOptions = {
-										center: new google.maps.LatLng(0.315000, 32.585832),
-										zoom: 10
-											};
-										var map = new google.maps.Map(document.getElementById("map"),
-									mapOptions);
-									}
-									google.maps.event.addDomListener(window, 'load', initialize);
+                              var map;
+                              function initialize() {
+                                var mapDiv = document.getElementById('map');
+                                map = new google.maps.Map(mapDiv, {
+                                  center: new google.maps.LatLng(0.315000, 32.58832),
+                                  zoom: 10,
+                                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                                });
 
-									//reload map on change of route
-									 $(document).ready(function(){
-										$("#r").live('change',function(){
-										alert();
-										$("#map").html('<img src="static/img/preload_img.gif" alt="Uploading...."/>');
-										});
-										});
+                                google.maps.event.addListenerOnce(map, 'tilesloaded', addMarkers);
 
-								</script>
+                              }
+
+                              function addMarkers() {
+                                for (var i = 0; i < 10; i++) {
+                                  var latLng =  new google.maps.LatLng(locations[i][1], locations[i][2]);
+                                  var marker = new google.maps.Marker({
+                                    position: latLng,
+                                    map: map
+                                  });
+                                }
+                              }
+
+
+                              google.maps.event.addDomListener(window, 'load', initialize);
+
+                                </script>
+                                <script type="text/javascript">
+                                    $(document).ready(function(){
+                                        $("#getRoute").change(function(){
+                                            var Rid=$(this).val();
+                                            $('#printHere').html(Rid);
+                                            document.getElementById("admDivCheck").style.display = "block";
+
+{#                                        $.ajax({#}
+{#                                            url: '/rstops', //Process Route Stops#}
+{#                                            type: 'POST', //this is the default though, you don't actually need to always mention it#}
+{#                                            data: {'id': id},#}
+{#                                            cache: false,#}
+{#                                            success: function(data) {#}
+{#                                                $(".admDivCheck").html(html);#}
+{#                                                document.getElementById("admDivCheck").style.display = "block";#}
+{#                                            }#}
+{#                                        });#}
+
+                                        });
+                                    });
+                            </script>
 
                             <div id="map" style="width: 100%; height: 300px"> </div>
 
@@ -47,15 +84,27 @@
                         <div class="span4">
                             <h2 class="title"><span>Choose Route</span></h2>
                         	<p>
-							   <form>
-									<select id="r">
+
+									<select id="getRoute" onchange="RouteSelectCheck(this);">
 											<option value="route"> Select Route </option>
-											{% for routes in routes %}
-											<option value="route">{{ routes.route_name }}</option>
+											{% for route in routes %}
+											<option id="route_id" value="{{route.id }}">{{ route.route_name }}</option>
 											 {%  endfor %}
 									</select>
-							   </form>
+
 							</p>
+                        </div>
+                        <div id="admDivCheck" class="span4" style="display:block;">
+                               <h4>STOPS</h4>
+                                Route selected <span id="printHere"></span>
+
+                        {% for route_stop in stops %}
+                          <tr>
+                            <td>{{ route_stop.id }}</td>
+                            <td>{{ route_stop.stop_name }}</td>
+                          </tr>
+                        {% endfor %}
+
                         </div>
                     </div>
                 </section>
