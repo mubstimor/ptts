@@ -17,4 +17,4 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class RouteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Route
-        fields = ('route_name', 'route_start','route_end')
+        fields = ('id', 'route_name', 'route_start','route_end')
