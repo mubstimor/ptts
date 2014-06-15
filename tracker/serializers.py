@@ -18,3 +18,8 @@ class RouteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Route
         fields = ('id', 'route_name', 'route_start','route_end')
+
+class BusSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Bus
+        fields = ('id', 'license_number', 'route')

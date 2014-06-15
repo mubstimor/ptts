@@ -1,15 +1,18 @@
 from django.conf.urls import patterns, include, url
 from rest_framework import routers
+from rest_framework.urlpatterns import format_suffix_patterns
 from tracker import views
 from django.conf import settings
 
 from django.contrib import admin
+
 admin.autodiscover()
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'view_routes', views.RouteViewSet)
+router.register(r'buses', views.BusViewSet)
 
 urlpatterns = patterns('',
     url(r'^$', 'tracker.views.home', name='home'),
@@ -26,6 +29,9 @@ urlpatterns = patterns('',
     url(r'^stops/get/(?P<route_id>\d+)/$', 'tracker.views.route_stops' , name='route_stops'),
     url(r'^rstops', 'tracker.views.rstops', name='rstops'),
 
+    # url(r'^buses/$', views.BusList.as_view()),
+    # url(r'^buses/(?P<pk>[0-9]+)/$', views.BusDetail.as_view()),
+
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
@@ -38,3 +44,5 @@ if not settings.DEBUG:
     urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     )
+
+# urlpatterns = format_suffix_patterns(urlpatterns)

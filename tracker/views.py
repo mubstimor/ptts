@@ -1,12 +1,16 @@
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
+from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.models import User, Group
 from django.template import RequestContext
 from rest_framework import viewsets
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from tracker.forms import ContactForm
 from tracker.models import *
-from tracker.serializers import UserSerializer, GroupSerializer, RouteSerializer
+from tracker.serializers import *
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
@@ -97,3 +101,10 @@ class RouteViewSet(viewsets.ModelViewSet):
      """
      queryset = Route.objects.all()
      serializer_class = RouteSerializer
+
+class BusViewSet(viewsets.ModelViewSet):
+     """
+     API endpoint that allows routes to be viewed or edited.
+     """
+     queryset = Bus.objects.all()
+     serializer_class = BusSerializer
