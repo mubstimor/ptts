@@ -23,3 +23,8 @@ class BusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Bus
         fields = ('id', 'license_number', 'route')
+
+class CordinateSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model =coordinate
+        fields = ('imei', 'latitude', 'longitude')

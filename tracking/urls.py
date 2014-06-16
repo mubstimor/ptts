@@ -29,6 +29,11 @@ urlpatterns = patterns('',
     url(r'^stops/get/(?P<route_id>\d+)/$', 'tracker.views.route_stops' , name='route_stops'),
     url(r'^rstops', 'tracker.views.rstops', name='rstops'),
 
+    url(r'^cordinates/$', 'tracker.views.cordinate_list'),
+
+    url(r'^buses/(?P<pk>\d+)/$', 'tracker.views.bus_detail'),
+    url(r'^getbus/(?P<license>.+)/$', 'tracker.views.search_bus'),
+
     # url(r'^buses/$', views.BusList.as_view()),
     # url(r'^buses/(?P<pk>[0-9]+)/$', views.BusDetail.as_view()),
 

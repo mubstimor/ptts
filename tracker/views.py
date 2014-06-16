@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 from tracker.forms import ContactForm
 from tracker.models import *
 from tracker.serializers import *
+from rest_framework.decorators import api_view
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
@@ -108,3 +109,70 @@ class BusViewSet(viewsets.ModelViewSet):
      """
      queryset = Bus.objects.all()
      serializer_class = BusSerializer
+
+@api_view(['GET', 'POST'])
+def cordinate_list(request):
+    """
+    List all cordinates, or create a new one.
+    """
+    if request.method == 'GET':
+        snippets = coordinate.objects.all()
+        serializer = CordinateSerializer(snippets, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = CordinateSerializer(data=request.DATA)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def bus_detail(request, pk):
+    """
+    Retrieve, update or delete a snippet instance.
+    """
+    try:
+        snippet = Bus.objects.get(pk=pk)
+    except Bus.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = BusSerializer(snippet)
+        return Response(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = BusSerializer(snippet, data=request.DATA)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        snippet.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def search_bus(request, license):
+    """
+    Retrieve, update or delete a snippet instance.
+    """
+    try:
+        snippet = Bus.objects.filter(license_number= license)
+    except Bus.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = BusSerializer(snippet)
+        return Response(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = BusSerializer(snippet, data=request.DATA)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        snippet.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
