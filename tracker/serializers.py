@@ -26,5 +26,5 @@ class BusSerializer(serializers.HyperlinkedModelSerializer):
 
 class CordinateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model =coordinate
+        model =Coordinate
         fields = ('imei', 'latitude', 'longitude')

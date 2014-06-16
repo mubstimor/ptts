@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f091bb48-cb92-4024-b2f4-01888228bff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/models.py" afterPath="$PROJECT_DIR$/tracker/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/serializers.py" afterPath="$PROJECT_DIR$/tracker/serializers.py" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serializers.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="serializers.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="19" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="525">
+            <state line="25" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.5628059" vertical-offset="0" max-vertical-offset="613">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="13" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.14029364" vertical-offset="514" max-vertical-offset="2745">
+            <state line="40" column="13" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="2745">
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -89,11 +87,11 @@
       <list>
         <option value="$PROJECT_DIR$/tracking/wsgi.py" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-        <option value="$PROJECT_DIR$/tracker/serializers.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
+        <option value="$PROJECT_DIR$/tracker/serializers.py" />
       </list>
     </option>
   </component>
@@ -765,13 +763,6 @@
         <state line="27" column="0" selection-start="818" selection-end="1134" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1770" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="8" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="765">
@@ -795,10 +786,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.14029364" vertical-offset="514" max-vertical-offset="2745">
+        <state line="40" column="13" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="2745">
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.5628059" vertical-offset="0" max-vertical-offset="613">
+          <folding />
         </state>
       </provider>
     </entry>
