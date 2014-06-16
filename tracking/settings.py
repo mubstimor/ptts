@@ -95,7 +95,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'twitter_tag',
-    # 'south',
+    'south',
     'tracker',
     # 'django.contrib.admin',
     'rest_framework',
