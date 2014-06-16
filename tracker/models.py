@@ -30,8 +30,7 @@ class Route_Stop(models.Model):
     def __unicode__(self):
         return self.stop_name
 
-class Cordinate(models.Model):
-    imei = models.CharField(max_length=25)
+class coordinate(models.Model):
     latitude = models.CharField(max_length=25)
     longitude =models.CharField(max_length=25)
     date_added = models.DateTimeField(auto_now_add=True, blank=False)

@@ -18,4 +18,4 @@ admin.site.register(Route_Stop, Route_StopAdmin)
 
 class CordinateAdmin(admin.ModelAdmin):
     list_display = ('latitude','longitude', 'imei')
-admin.site.register(Cordinate, CordinateAdmin)
+admin.site.register(coordinate, CordinateAdmin)
