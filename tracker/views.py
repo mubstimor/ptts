@@ -116,7 +116,7 @@ def cordinate_list(request):
     List all cordinates, or create a new one.
     """
     if request.method == 'GET':
-        snippets = coordinate.objects.all()
+        snippets = Coordinate.objects.all()
         serializer = CordinateSerializer(snippets, many=True)
         return Response(serializer.data)
 
