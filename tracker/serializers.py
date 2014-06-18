@@ -19,6 +19,11 @@ class RouteSerializer(serializers.HyperlinkedModelSerializer):
         model = Route
         fields = ('id', 'route_name', 'route_start','route_end')
 
+class RouteStopSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Route_Stop
+        fields = ('id', 'stop_name', 'latitude','longitude')
+
 class BusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Bus
@@ -28,3 +33,10 @@ class CordinateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model =coordinate
         fields = ('imei', 'latitude', 'longitude')
+
+class StopSerializer(serializers.ModelSerializer):
+    stops = RouteStopSerializer(many=True)
+
+    class Meta:
+        model = Route
+        fields = ('id', 'route_name','stops')

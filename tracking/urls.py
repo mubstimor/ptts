@@ -13,6 +13,7 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'view_routes', views.RouteViewSet)
 router.register(r'buses', views.BusViewSet)
+router.register(r'dstops', views.StopsViewSet)
 
 urlpatterns = patterns('',
     url(r'^$', 'tracker.views.home', name='home'),
@@ -33,6 +34,8 @@ urlpatterns = patterns('',
 
     url(r'^buses/(?P<pk>\d+)/$', 'tracker.views.bus_detail'),
     url(r'^getbus/(?P<license>.+)/$', 'tracker.views.search_bus'),
+
+    # url(r'^mdata/$', 'tracker.views.RouteAndStopsData'),
 
     # url(r'^buses/$', views.BusList.as_view()),
     # url(r'^buses/(?P<pk>[0-9]+)/$', views.BusDetail.as_view()),

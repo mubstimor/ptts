@@ -12,6 +12,7 @@ from tracker.forms import ContactForm
 from tracker.models import *
 from tracker.serializers import *
 from rest_framework.decorators import api_view
+from django.utils import simplejson
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
@@ -108,6 +109,13 @@ class BusViewSet(viewsets.ModelViewSet):
      """
      queryset = Bus.objects.all()
      serializer_class = BusSerializer
+
+class StopsViewSet(viewsets.ModelViewSet):
+     """
+     API endpoint that allows stops to be viewed or edited.
+     """
+     queryset = Route.objects.all()
+     serializer_class = StopSerializer
 
 @api_view(['GET', 'POST'])
 def cordinate_list(request):

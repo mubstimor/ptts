@@ -25,7 +25,8 @@ class Route_Stop(models.Model):
     stop_name = models.CharField(max_length=25)
     latitude = models.CharField(max_length=25)
     longitude = models.CharField(max_length=25)
-    route = models.ForeignKey(Route)
+    # route = models.ForeignKey(Route)
+    route = models.ForeignKey(Route, related_name='stops')
 
     def __unicode__(self):
         return self.stop_name
