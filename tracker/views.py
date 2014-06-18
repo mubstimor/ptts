@@ -88,10 +88,6 @@ class UserViewSet(viewsets.ModelViewSet):
      queryset = User.objects.all()
      serializer_class = UserSerializer
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f3f5c1523a99f955c902f19f00074e7e54789fe5
 class GroupViewSet(viewsets.ModelViewSet):
      """
      API endpoint that allows groups to be viewed or edited.
@@ -113,10 +109,6 @@ class BusViewSet(viewsets.ModelViewSet):
      queryset = Bus.objects.all()
      serializer_class = BusSerializer
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f3f5c1523a99f955c902f19f00074e7e54789fe5
 @api_view(['GET', 'POST'])
 def cordinate_list(request):
     """

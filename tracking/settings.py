@@ -157,21 +157,14 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-<<<<<<< HEAD
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-   }
-}
-=======
+#
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 # }
->>>>>>> f3f5c1523a99f955c902f19f00074e7e54789fe5
+
 
 # import socket
 # if socket.gethostname().startswith('127'):
@@ -184,11 +177,9 @@ DATABASES = {
 #         }
 # else:
     #Production Server Settings go here
-<<<<<<< HEAD
-# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-=======
+
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
->>>>>>> f3f5c1523a99f955c902f19f00074e7e54789fe5
+
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
