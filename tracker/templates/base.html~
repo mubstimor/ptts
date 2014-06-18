@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tracker - {% block pagetitle %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tracker is meant to help people easily tell where the buses are currently positioned so that they plan adequately.">
+    <meta name="author" content="Group BSE 14-12">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg9J6qXhHCQRzkqnESvQtpGLH4Qgdzvaw&sensor=true"> </script>
+	<script type="text/javascript" src="static/js/jquery.min.js"> </script>
+	<script type="text/javascript" src="static/js/jquery.form.js"> </script>
+
+    <link href="/static/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" id="camera-css"  href="/static/css/camera.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link href="/static/css/theme.css" rel="stylesheet">
+    <link href="/static/css/jquery.tweet.css"  media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/css/skins/tango/skin.css" />
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/css/docs.css" rel="stylesheet">
+    <link href="/static/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type='text/javascript'>
+        jQuery(function($){
+            $(".tweet").tweet({
+              join_text: "auto",
+              username: "mubirutim",
+              avatar_size: 48,
+              count: 3,
+              auto_join_text_default: " we said, ",
+              auto_join_text_ed: " we ",
+              auto_join_text_ing: " we were ",
+              auto_join_text_reply: " we replied ",
+              auto_join_text_url: " we were checking out ",
+              loading_text: "loading tweets..."
+            });
+          });
+    </script>
+</head>
+<body>
+
+<!--header-->
+    <div class="header">
+         {% include "header.html" %}
+    </div>
+ <!--//header-->
+
+ <!--page_container-->
+    <div class="page_container">
+        <!--slider-->
+        {% block slider %}
+        {% endblock %}
+ <!--//slider-->
+
+ <!-- Breadcrumb appears on all pages other than the Index-->
+    {% block breadcrumb %}{% endblock %}
+
+ <!-- Planning appears on only index page-->
+    {% block planning %}{% endblock %}
+
+ <!-- welcome message for users -->
+    {% block welcome %}{% endblock %}
+
+ <!--MAIN CONTENT AREA -->
+    {% block main_content %}{% endblock %}
+    </div>
+ <!--//page_container-->
+
+ <!--footer-->
+    <div id="footer">
+        {% include "footer.html" %}
+    </div>
+ <!--//footer-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="/static/js/camera.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.tweet.js"></script>
+    <script type="text/javascript" src="/static/js/myscript.js"></script>
+    <script src="/static/js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			//Slider
+			$('#camera_wrap_1').camera();
+
+			//Featured works & latest posts
+			$('#mycarousel, #mycarousel2, #newscarousel').jcarousel();
+
+{#            $("#ajax-contact-form").submit(function() {#}
+{#				var str = $(this).serialize();#}
+{#				$.ajax({#}
+{#					type: "POST",#}
+{#					url: "contact_form/contact_process.php",#}
+{#					data: str,#}
+{#					success: function(msg) {#}
+{#						// Message Sent - Show the 'Thank You' message and hide the form#}
+{#						if(msg == 'OK') {#}
+{#							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';#}
+{#							$("#fields").hide();#}
+{#						} else {#}
+{#							result = msg;#}
+{#						}#}
+{#						$('#note').html(result);#}
+{#					}#}
+{#				});#}
+{#				return false;#}
+{#			});#}
+		});
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block pagetitle %}GPS Location{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        	<div class="wrap">
+            	<div class="container">
+                    <a href="/">Home</a><span>/</span>GPS Location
+            </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block main_content %}
+    <div class="wrap">
+        	<div class="container">
+                <section>
+                    <div class="row">
+                        <div class="span3" >
+                <!--Sidebar content-->
+                <ul class="unstyled text-center">
+                    <li><a href="" >+ See what's happening</a></li>
+                    <li><a href="" >+ Know what to fix</a></li>
+                    <li><a href="" >+ Prevent big problems</a></li>
+                    <li><a href="" >+ Safety and compliance</a></li>
+                </ul>
+
+                <blockquote>
+                    <p>Any Question?</p>
+                </blockquote>
+                <img src="static/img/help.jpg">
+                <p>Check our <a href=""> FAQS</a> </p>
+
+                <address>
+                    <strong>Twitter, Inc.</strong><br>
+                    795 Folsom Ave, Suite 600<br>
+                    San Francisco, CA 94107<br>
+                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                </address>
+
+                <address>
+                    <strong>Full Name</strong><br>
+                    <a href="mailto:#">first.last@example.com</a>
+                </address>
+
+            </div>
+            <div class="span8">
+
+                <h2>How Does GPS Vehicle Tracking Work?</h2>
+                <p>Below, find information regarding the mechanics of GPS vehicle tracking, as well as the primary differences in
+                    vehicle tracking methods. As always, contact us with any questions you
+                    have regarding GPS vehicle tracking systems, software and devices.</p>
+
+                <h4>How Does GPS Work?</h4>
+                    <p>The simple answer is that orbiting satellites watch your vehicle from above. However, it’s obviously a bit more complex
+                        than that. According the U.S. Department of Defense, 24 satellites orbit the Earth and transmit signals to the ground
+                        (additional satellites are on standby but are not actively in use). Each orbits the planet every 12 hours,
+                        and they are strategically placed for impressively accurate triangulation.</p>
+
+                <h4> What Is Triangulation?</h4>
+                    <p>To fully understand how GPS tracking works, you should have a basic understanding of triangulation. In short, this method
+                        requires at least three active satellites but can view as many as twelve simultaneously. On the ground, a gps tracking
+                        device receives signals from the GPS satellites whereby each satellite knows the exact distance from the other satellites
+                        in its proximity.  Depending on the time it takes for a signal to reach the device from each satellite,
+                        the GPS receiver can calculate it’s exact location on the ground. </p>
+
+                <h4> How Precise Is GPS?</h4>
+                    <p>Extremely. Considering the distance a signal must travel – from space – the accuracy of GPS tracking is
+                        remarkable. If you have ever used a handheld GPS device, you know that your tracking dot can pinpoint
+                        whether you are at an intersection or between two blocks. GPS devices can tell your location within just
+                        a few dozen feet. The accuracy of the GPS device depends largely on atmospheric conditions, the speed you
+                        are traveling, your location and the type of GPS vehicle tracking device you are using – which brings us
+                        to our next point.
+                    </p>
+                <img src="static/img/satellite_remote.jpg" class="img-rounded">
+                <h4> Cellular vs. Satellite Tracking Devices</h4>
+                    <p> Now that you understand the basics of how GPS works, we can expand on the differences between cellular and satellite
+                        tracking devices. This boils down to the type of wireless network that best suits your purposes.</p>
+                    <p>Cellular Vehicle Tracking. This type of tracking is typically used in urban areas, or areas with reliable cellular network
+                        coverage. Depending on your region, different wireless companies, such as Airtel, MTN and UTL, can provide you with
+                        better coverage options.</p>
+                    <p>Satellite Vehicle Tracking. Satellite tracking is preferable for Vehicles traveling in rural areas, or vehicles traveling
+                        in and out of reliable coverage zones.</p>
+
+                </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+{% endblock %}
