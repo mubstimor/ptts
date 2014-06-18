@@ -39,4 +39,4 @@ class StopSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Route
-        fields = ('id', 'route_name','stops')
+        fields = ('id', 'route_name','route_start','route_end','stops')
