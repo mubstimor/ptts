@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f091bb48-cb92-4024-b2f4-01888228bff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/serializers.py" afterPath="$PROJECT_DIR$/tracker/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/base.html" afterPath="$PROJECT_DIR$/tracker/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
@@ -29,7 +32,7 @@
       <file leaf-file-name="serializers.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="21" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="675">
+            <state line="18" column="21" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -47,7 +50,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="2081" selection-end="2081" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2865">
+            <state line="82" column="26" selection-start="2965" selection-end="2965" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="2985">
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -67,7 +70,28 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="3" selection-start="5615" selection-end="5615" vertical-scroll-proportion="0.4649266" vertical-offset="2610" max-vertical-offset="3375">
+            <state line="179" column="0" selection-start="5074" selection-end="5074" vertical-scroll-proportion="0.59183675" vertical-offset="2322" max-vertical-offset="3375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="79" selection-start="3207" selection-end="3207" vertical-scroll-proportion="-16.708334" vertical-offset="529" max-vertical-offset="2010">
+              <folding>
+                <element signature="e#5052#5086#0" expanded="true" />
+                <element signature="e#5676#5698#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="26" selection-start="2254" selection-end="2254" vertical-scroll-proportion="-2.88" vertical-offset="531" max-vertical-offset="1965">
               <folding />
             </state>
           </provider>
@@ -76,7 +100,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="27" selection-start="1566" selection-end="1566" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="825">
+            <state line="37" column="9" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -96,13 +120,14 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/tracking/wsgi.py" />
-        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
         <option value="$PROJECT_DIR$/tracker/admin.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
-        <option value="$PROJECT_DIR$/tracking/settings.py" />
-        <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracker/serializers.py" />
+        <option value="$PROJECT_DIR$/tracker/templates/base.html" />
+        <option value="$PROJECT_DIR$/tracker/views.py" />
+        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+        <option value="$PROJECT_DIR$/tracking/settings.py" />
       </list>
     </option>
   </component>
@@ -181,6 +206,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,27 +332,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tracking" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -335,7 +358,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tracking" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -451,12 +494,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -476,22 +519,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="31" selection-start="2715" selection-end="2721" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1560">
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="7" selection-start="4942" selection-end="4942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/routes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="26" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
@@ -764,11 +791,6 @@
         <state line="41" column="14" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="765" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="818" selection-end="1134" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1770" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracking/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="19" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
@@ -783,22 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="27" selection-start="1566" selection-end="1566" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="2081" selection-end="2081" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2865">
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="21" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="675">
@@ -806,9 +812,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="458" selection-end="458" vertical-scroll-proportion="0.39893618" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="26" selection-start="2965" selection-end="2965" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="2985">
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="9" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="26" selection-start="2254" selection-end="2254" vertical-scroll-proportion="-2.88" vertical-offset="531" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="79" selection-start="3207" selection-end="3207" vertical-scroll-proportion="-16.708334" vertical-offset="529" max-vertical-offset="2010">
+          <folding>
+            <element signature="e#5052#5086#0" expanded="true" />
+            <element signature="e#5676#5698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="3" selection-start="5615" selection-end="5615" vertical-scroll-proportion="0.4649266" vertical-offset="2610" max-vertical-offset="3375">
+        <state line="179" column="0" selection-start="5074" selection-end="5074" vertical-scroll-proportion="0.59183675" vertical-offset="2322" max-vertical-offset="3375">
           <folding />
         </state>
       </provider>

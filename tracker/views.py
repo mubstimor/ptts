@@ -16,6 +16,9 @@ from django.utils import simplejson
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
+from django import template
+
+register = template.Library()
 
 # Applications' views here.
 def home(request):
@@ -75,6 +78,11 @@ def find_bus(request):
     route = Route.objects.all()
     variables = RequestContext(request,{"routes":route})
     return render_to_response("find_bus.html", variables)
+
+@register.inclusion_tag('find_bus.html')
+def show_results(request):
+    locations = coordinate.objects.all()
+    return {'locations': locations}
 
 def rstops(request, route_id=1):
     return ('find_bus.html', {'route_stops': Route_Stop.objects.filter(id = route_id) })
