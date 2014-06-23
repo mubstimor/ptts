@@ -79,6 +79,16 @@ def find_bus(request):
     variables = RequestContext(request,{"routes":route})
     return render_to_response("find_bus.html", variables)
 
+def find_bus_location(request):
+    location = coordinate.objects.all()
+    locationdata = RequestContext(request,{"locationdata":location})
+    return render_to_response("find_bus.html", locationdata)
+
+def bus_route_details(request):
+    details = Bus.objects.filter(id=1, imei="0.332335").select_related()
+    bus_loc_details = RequestContext(request,{"buslocdetails":details})
+    return render_to_response("find_bus.html", bus_loc_details)
+
 @register.inclusion_tag('find_bus.html')
 def show_results(request):
     locations = coordinate.objects.all()

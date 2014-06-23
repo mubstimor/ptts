@@ -157,12 +157,12 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
 # import socket
 # if socket.gethostname().startswith('127'):
@@ -176,7 +176,7 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # else:
     #Production Server Settings go here
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
 REST_FRAMEWORK = {

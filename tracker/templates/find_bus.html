@@ -26,7 +26,7 @@
                               <script type="text/javascript">
                                 var map;
                                 var myLatlng;
-                                var current_zoom = 13;
+                                var current_zoom = 12;
 
 
                               function GMloader(){
@@ -45,18 +45,17 @@
                                 // Draw the map
                                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-                                   {% for location in locations %}
-                                       var point = new google.maps.LatLng({{location.latitude}},{{location.Longitude}});
+                                  {% for location in locationdata %}
+                                       var point = new google.maps.LatLng({{location.latitude}},{{location.longitude}});
                                        var marker = new google.maps.Marker({
                                            position: point,
                                            map: map,
                                            title: '{{ mark.name }}'
                                           });
                                          marker['infowindow']  = new google.maps.InfoWindow({
-                                                 content: "<h1>{{location.imei}}</h1> <br> {{ mark.name }}"+
-                                                          "<p> {{ mark.desc }}<br /><a href='{{mark.link}}'"+
-                                                          " target='_blank'>Visit our website</a> <br />{{ mark.contacts }}<br /></p>"+
-                                                          "<button type='button' onClick='return extraInfo({{ mark.id }});' class='btn btn-primary btn-xs'>Read More</button>",
+                                                 content: "<h1>{{location.imei}}</h1>"+
+                                                          "<p> {{location.latitude}}<br />{{location.longitude}}</p>"
+                                                         ,
                                                  maxWidth:230
                                                    });
                                        google.maps.event.addListener(marker, 'click', function() {
@@ -65,7 +64,7 @@
                                          google.maps.event.addListener(marker, 'mouseover', function() {
                                             this['infowindow'].open(map, this);
                                                 });
-                                      {% endfor %}
+                                      {%  endfor %}
 
                                 }
                              }
@@ -109,6 +108,10 @@
 									</select>
 
 							</p>
+{#                        <p> Locations {% for location in locationdata %}#}
+{#                            {{location.latitude}} {{location.longitude}}#}
+{#                            {% endfor %}#}
+                        </p>
                         </div>
                         <div id="admDivCheck" class="span4" style="display:block;">
                                <h4>STOPS</h4>
