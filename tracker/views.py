@@ -12,7 +12,6 @@ from tracker.forms import ContactForm
 from tracker.models import *
 from tracker.serializers import *
 from rest_framework.decorators import api_view
-from django.utils import simplejson
 from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login

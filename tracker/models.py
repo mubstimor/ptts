@@ -14,7 +14,9 @@ class Route(models.Model):
         return self.route_name
 
 class Bus(models.Model):
+    # bus_id = models.AutoField(primary_key=True)
     license_number = models.CharField(max_length=12)
+    imeib = models.CharField(max_length=25)
     route = models.ForeignKey(Route)
     date_added = models.DateTimeField(auto_now_add=True, blank=False)
 
@@ -35,6 +37,7 @@ class coordinate(models.Model):
     imei = models.CharField(max_length=25)
     latitude = models.CharField(max_length=25)
     longitude =models.CharField(max_length=25)
+    bus_id = models.ForeignKey(Bus)
     date_added = models.DateTimeField(auto_now_add=True, blank=False)
 
     def __unicode__(self):
