@@ -45,7 +45,27 @@
                                 // Draw the map
                                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-                                  {% for location in locationdata %}
+{#                                  {% for location in locationdata %}#}
+{#                                       var point = new google.maps.LatLng({{location.latitude}},{{location.longitude}});#}
+{#                                       var marker = new google.maps.Marker({#}
+{#                                           position: point,#}
+{#                                           map: map,#}
+{#                                           title: '{{ mark.name }}'#}
+{#                                          });#}
+{#                                         marker['infowindow']  = new google.maps.InfoWindow({#}
+{#                                                 content: "<h1>{{location.imei}}</h1>"+#}
+{#                                                          "<p> {{location.latitude}}<br />{{location.longitude}}</p>"#}
+{#                                                         ,#}
+{#                                                 maxWidth:230#}
+{#                                                   });#}
+{#                                       google.maps.event.addListener(marker, 'click', function() {#}
+{#                                            this['infowindow'].open(map, this);#}
+{#                                                });#}
+{#                                         google.maps.event.addListener(marker, 'mouseover', function() {#}
+{#                                            this['infowindow'].open(map, this);#}
+{#                                                });#}
+{#                                      {%  endfor %}#}
+                                          {% for location in buslocations %}
                                        var point = new google.maps.LatLng({{location.latitude}},{{location.longitude}});
                                        var marker = new google.maps.Marker({
                                            position: point,
@@ -53,7 +73,7 @@
                                            title: '{{ mark.name }}'
                                           });
                                          marker['infowindow']  = new google.maps.InfoWindow({
-                                                 content: "<h1>{{location.imei}}</h1>"+
+                                                 content: "<h1>{{location.bus_id }}</h1>"+
                                                           "<p> {{location.latitude}}<br />{{location.longitude}}</p>"
                                                          ,
                                                  maxWidth:230
@@ -106,6 +126,7 @@
 											<option id="route_id" value="{{route.id }}">{{ route.route_name }}</option>
 											 {%  endfor %}
 									</select>
+
 
 							</p>
 {#                        <p> Locations {% for location in locationdata %}#}

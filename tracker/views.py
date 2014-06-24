@@ -88,6 +88,12 @@ def bus_route_details(request):
     bus_loc_details = RequestContext(request,{"buslocdetails":details})
     return render_to_response("find_bus.html", bus_loc_details)
 
+def current_bus_location(request):
+    location = coordinate.objects.select_related()
+    buslocations = RequestContext(request,{"buslocations":location})
+    return render_to_response("find_bus.html", buslocations)
+
+
 @register.inclusion_tag('find_bus.html')
 def show_results(request):
     locations = coordinate.objects.all()
@@ -200,3 +206,17 @@ def search_bus(request, license):
     elif request.method == 'DELETE':
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+def get_currentBusLocations(request, route):
+    """
+    Retrieve a snippet instance.
+    """
+    try:
+        snippet = coordinate.objects.filter(route_id= route)
+    except coordinate.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = CordinateSerializer(snippet, many=True)
+        return Response(serializer.data)

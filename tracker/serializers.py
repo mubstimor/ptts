@@ -27,12 +27,12 @@ class RouteStopSerializer(serializers.HyperlinkedModelSerializer):
 class BusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Bus
-        fields = ('id', 'license_number','imei', 'route')
+        fields = ('id', 'license_number','imeib', 'route_id')
 
 class CordinateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model =coordinate
-        fields = ('bus', 'latitude', 'longitude','date_added')
+        fields = ('bus_id', 'route_id', 'latitude', 'longitude','date_added')
 
 class StopSerializer(serializers.ModelSerializer):
     stops = RouteStopSerializer(many=True)
