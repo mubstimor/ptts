@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/urls.py" afterPath="$PROJECT_DIR$/tracking/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/settings.py" afterPath="$PROJECT_DIR$/tracking/settings.py" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="1" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2880">
+            <state line="161" column="0" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.6458685" vertical-offset="2017" max-vertical-offset="2865">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="66" selection-start="9260" selection-end="9260" vertical-scroll-proportion="0.7320144" vertical-offset="2113" max-vertical-offset="2820">
+            <state line="153" column="68" selection-start="8738" selection-end="8738" vertical-scroll-proportion="-7.5833335" vertical-offset="2113" max-vertical-offset="2820">
               <folding>
                 <element signature="e#8470#8504#0" expanded="true" />
               </folding>
@@ -130,12 +129,12 @@
         <option value="$PROJECT_DIR$/tracker/admin.py" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
-        <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/templates/header.html" />
         <option value="$PROJECT_DIR$/tracker/templates/footer.html" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+        <option value="$PROJECT_DIR$/tracking/settings.py" />
       </list>
     </option>
   </component>
@@ -775,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="1" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="2266" selection-end="2266" vertical-scroll-proportion="-22.458334" vertical-offset="61" max-vertical-offset="690">
@@ -833,10 +825,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="66" selection-start="9260" selection-end="9260" vertical-scroll-proportion="0.7320144" vertical-offset="2113" max-vertical-offset="2820">
+        <state line="153" column="68" selection-start="8738" selection-end="8738" vertical-scroll-proportion="-7.5833335" vertical-offset="2113" max-vertical-offset="2820">
           <folding>
             <element signature="e#8470#8504#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="0" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.6458685" vertical-offset="2017" max-vertical-offset="2865">
+          <folding />
         </state>
       </provider>
     </entry>
