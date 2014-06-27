@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/footer.html" afterPath="$PROJECT_DIR$/tracker/templates/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/header.html" afterPath="$PROJECT_DIR$/tracker/templates/header.html" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="86" selection-start="6308" selection-end="6308" vertical-scroll-proportion="0.025817556" vertical-offset="1650" max-vertical-offset="3210">
+            <state line="143" column="60" selection-start="7533" selection-end="7533" vertical-scroll-proportion="-12.958333" vertical-offset="1834" max-vertical-offset="2475">
               <folding />
             </state>
           </provider>
@@ -50,7 +51,25 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="2010">
+            <state line="48" column="14" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-8.041667" vertical-offset="527" max-vertical-offset="2010">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="2266" selection-end="2266" vertical-scroll-proportion="-22.458334" vertical-offset="61" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="118" selection-start="4344" selection-end="4344" vertical-scroll-proportion="0.67086333" vertical-offset="647" max-vertical-offset="1395">
               <folding />
             </state>
           </provider>
@@ -104,6 +123,8 @@
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+        <option value="$PROJECT_DIR$/tracker/templates/header.html" />
+        <option value="$PROJECT_DIR$/tracker/templates/footer.html" />
       </list>
     </option>
   </component>
@@ -459,20 +480,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="40" selection-start="7145" selection-end="7145" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="3420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="58" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="143" column="0" selection-start="3948" selection-end="4084" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="2880">
@@ -750,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="2010">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="118" column="1" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2880">
@@ -787,7 +787,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="86" selection-start="6308" selection-end="6308" vertical-scroll-proportion="0.025817556" vertical-offset="1650" max-vertical-offset="3210">
+        <state line="143" column="60" selection-start="7533" selection-end="7533" vertical-scroll-proportion="-12.958333" vertical-offset="1834" max-vertical-offset="2475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="14" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-8.041667" vertical-offset="527" max-vertical-offset="2010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="2266" selection-end="2266" vertical-scroll-proportion="-22.458334" vertical-offset="61" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="118" selection-start="4344" selection-end="4344" vertical-scroll-proportion="0.67086333" vertical-offset="647" max-vertical-offset="1395">
           <folding />
         </state>
       </provider>

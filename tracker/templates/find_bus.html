@@ -46,47 +46,6 @@
                                 // Draw the map
                                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-{#                                  {% for location in locationdata %}#}
-{#                                       var point = new google.maps.LatLng({{location.latitude}},{{location.longitude}});#}
-{#                                       var marker = new google.maps.Marker({#}
-{#                                           position: point,#}
-{#                                           map: map,#}
-{#                                           title: '{{ mark.name }}'#}
-{#                                          });#}
-{#                                         marker['infowindow']  = new google.maps.InfoWindow({#}
-{#                                                 content: "<h1>{{location.imei}}</h1>"+#}
-{#                                                          "<p> {{location.latitude}}<br />{{location.longitude}}</p>"#}
-{#                                                         ,#}
-{#                                                 maxWidth:230#}
-{#                                                   });#}
-{#                                       google.maps.event.addListener(marker, 'click', function() {#}
-{#                                            this['infowindow'].open(map, this);#}
-{#                                                });#}
-{#                                         google.maps.event.addListener(marker, 'mouseover', function() {#}
-{#                                            this['infowindow'].open(map, this);#}
-{#                                                });#}
-{#                                      {%  endfor %}#}
-                                          {% for location in buslocations %}
-                                       var point = new google.maps.LatLng({{location.latitude}},{{location.longitude}});
-                                       var marker = new google.maps.Marker({
-                                           position: point,
-                                           map: map,
-                                           title: '{{ mark.name }}'
-                                          });
-                                         marker['infowindow']  = new google.maps.InfoWindow({
-                                                 content: "<h1>{{location.bus_id }}</h1>"+
-                                                          "<p> {{location.latitude}}<br />{{location.longitude}}</p>"
-                                                         ,
-                                                 maxWidth:230
-                                                   });
-                                       google.maps.event.addListener(marker, 'click', function() {
-                                            this['infowindow'].open(map, this);
-                                                });
-                                         google.maps.event.addListener(marker, 'mouseover', function() {
-                                            this['infowindow'].open(map, this);
-                                                });
-                                      {%  endfor %}
-
                                 }
                              }
                              </script>
@@ -97,10 +56,6 @@
                                             var Rid=$(this).val();
 
                                              $("#check").html('<img src="static/img/loader.gif" align="absmiddle">&nbsp;Loading bus data...');
-
-                                            $('#printHere').html(Rid);
-                                            document.getElementById("admDivCheck").style.display = "block";
-
 
                                               function getCookie(name) {
                                                 var cookieValue = null;
@@ -127,7 +82,7 @@
                                                 cache: false,
                                                 success: function(html)
                                                 {
-                                                    alert("Response "+JSON.stringify(html));
+{#                                                    alert("Response "+JSON.stringify(html));#}
                                                     var arr = html;
                                                     i;
                                                     for (i = 0; i < arr.length; ++i) {
@@ -155,7 +110,7 @@
                                                 $("#check").html(' ');
                                                 },
                                                     error: function(xhr, textStatus, thrownError){
-                                                        alert("xhr status: " + xhr.statusText);
+{#                                                        alert("xhr status: " + xhr.statusText);#}
                                                     }
                                                 });
                                              return false;
@@ -181,11 +136,7 @@
 									</select>
 
 							</p>
-                        <p>
-                            Ajax loaded data
-                            <h3 name="busdata">replace with json data</h3>
 
-                        </p>
                         <span id='check'></span>
 
 
