@@ -42,6 +42,7 @@ urlpatterns = patterns('',
     url(r'^getbus/(?P<license>.+)/$', 'tracker.views.search_bus'),
 
     url(r'^getbuslocations/(?P<route>.+)/$', 'tracker.views.get_currentBusLocations'),
+    url(r'^getroutestops/(?P<route>.+)/$', 'tracker.views.get_stopsOnRoute'),
 
     # url(r'^mdata/$', 'tracker.views.RouteAndStopsData'),
 

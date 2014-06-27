@@ -220,3 +220,17 @@ def get_currentBusLocations(request, route):
     if request.method == 'GET':
         serializer = CordinateSerializer(snippet, many=True)
         return Response(serializer.data)
+
+@api_view(['GET'])
+def get_stopsOnRoute(request, route):
+    """
+    Retrieve a snippet instance.
+    """
+    try:
+        snippet = Route_Stop.objects.filter(route= route)
+    except Route_Stop.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = RouteStopSerializer(snippet, many=True)
+        return Response(serializer.data)
