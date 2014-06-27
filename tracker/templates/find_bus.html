@@ -122,13 +122,37 @@
                                                 ({
                                                 type: "GET",
                                                 url: "/getbuslocations/"+Rid,
-                                                data: {'route':Rid,'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
+                                                data: {'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
                                                 contentType: 'application/json',
                                                 cache: false,
                                                 success: function(html)
                                                 {
+                                                    alert("Response "+JSON.stringify(html));
+                                                    var arr = html;
+                                                    i;
+                                                    for (i = 0; i < arr.length; ++i) {
+                                                        console.log(arr[i].bus_id);
+                                                        var point = new google.maps.LatLng(arr[i].latitude,arr[i].longitude);
+                                                    var marker = new google.maps.Marker({
+                                                    position: point,
+                                                    map: map,
+                                                    title: arr[i].bus_id
+                                                    });
+                                                    marker['infowindow']  = new google.maps.InfoWindow({
+                                                    content: "<h1>"+arr[i].bus_id+"</h1>"+
+                                                          "<p>"+ arr[i].latitude+"<br />"+arr[i].longitude+"</p>"
+                                                         ,
+                                                    maxWidth:230
+                                                    });
+                                                    google.maps.event.addListener(marker, 'click', function() {
+                                                    this['infowindow'].open(map, this);
+                                                    });
+                                                    google.maps.event.addListener(marker, 'mouseover', function() {
+                                                    this['infowindow'].open(map, this);
+                                                    });
+                                                        } //end forloop
+                                                $(".busdata").html(JSON.stringify(html));
                                                 $("#check").html(' ');
-                                                $(".busdata").html(html);
                                                 },
                                                     error: function(xhr, textStatus, thrownError){
                                                         alert("xhr status: " + xhr.statusText);
@@ -136,19 +160,6 @@
                                                 });
                                              return false;
 
-
-
-
-{#                                        $.ajax({#}
-{#                                            url: '/rstops', //Process Route Stops#}
-{#                                            type: 'POST', //this is the default though, you don't actually need to always mention it#}
-{#                                            data: {'id': id},#}
-{#                                            cache: false,#}
-{#                                            success: function(data) {#}
-{#                                                $(".admDivCheck").html(html);#}
-{#                                                document.getElementById("admDivCheck").style.display = "block";#}
-{#                                            }#}
-{#                                        });#}
 
                                         });
                                     });
@@ -170,8 +181,9 @@
 									</select>
 
 							</p>
-                        <p name="busdata">
+                        <p>
                             Ajax loaded data
+                            <h3 name="busdata">replace with json data</h3>
 
                         </p>
                         <span id='check'></span>
