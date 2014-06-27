@@ -24,8 +24,12 @@ urlpatterns = patterns('',
     url(r'^benefits', 'tracker.views.benefits', name='benefits'),
     url(r'^gps', 'tracker.views.gps', name='gps'),
     # url(r'^find_bus', 'tracker.views.find_bus_location', name='find_bus'),
-    url(r'^find_bus', 'tracker.views.current_bus_location', name='find_bus'),
-    # url(r'^find_bus', 'tracker.views.find_bus', name='find_bus'),
+
+    #provides for markers
+    # url(r'^find_bus', 'tracker.views.current_bus_location', name='find_bus'),
+
+    url(r'^find_bus', 'tracker.views.find_bus', name='find_bus'),
+
     url(r'^routes', 'tracker.views.routes', name='routes'),
     url(r'^get_started', 'tracker.views.get_started', name='get_started'),
     url(r'^route_stops/(?P<route_id>\d+)/$', 'tracker.views.route_stops' , name='route_stops'),
@@ -36,6 +40,7 @@ urlpatterns = patterns('',
 
     url(r'^buses/(?P<pk>\d+)/$', 'tracker.views.bus_detail'),
     url(r'^getbus/(?P<license>.+)/$', 'tracker.views.search_bus'),
+
     url(r'^getbuslocations/(?P<route>.+)/$', 'tracker.views.get_currentBusLocations'),
 
     # url(r'^mdata/$', 'tracker.views.RouteAndStopsData'),

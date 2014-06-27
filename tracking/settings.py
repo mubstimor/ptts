@@ -97,7 +97,6 @@ INSTALLED_APPS = (
     'twitter_tag',
     'south',
     'tracker',
-    # 'django.contrib.admin',
     'rest_framework',
     #'contact',
 )
@@ -130,21 +129,6 @@ SUIT_CONFIG = {
     'SHOW_REQUIRED_ASTERISK': True,  # Default True
     'CONFIRM_UNSAVED_CHANGES': True, # Default True
 
-    # menu
-    # 'SEARCH_URL': '/admin/auth/user/',
-    # 'MENU_ICONS': {
-    #    'sites': 'icon-leaf',
-    #    'auth': 'icon-lock',
-    # },
-    # 'MENU_OPEN_FIRST_CHILD': True, # Default True
-    # 'MENU_EXCLUDE': ('auth.group',),
-    # 'MENU': (
-    #     'sites',
-    #     {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-    #     {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-    #     {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
-    # ),
-
     # misc
     'LIST_PER_PAGE': 15
 }
@@ -157,26 +141,14 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
-# import socket
-# if socket.gethostname().startswith('127'):
-#     #Development Server Settings go here
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#             }
-#         }
-# else:
-    #Production Server Settings go here
-
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
 REST_FRAMEWORK = {
@@ -193,15 +165,9 @@ REST_FRAMEWORK = {
     # ],
 
     'PAGINATE_BY': 10,
-  #
-  #   'DEFAULT_RENDERER_CLASSES': (
-  #   'rest_framework.renderers.JSONRenderer',
-  #   'rest_framework.renderers.XMLRenderer',
-  #   'rest_framework.renderers.BrowsableAPIRenderer',
-  # )
 }
 
-#GMAIL SETTINGSsy
+#GMAIL SETTINGSsyv
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mubstimor@gmail.com'
 EMAIL_HOST_PASSWORD = '0772timothy$'

@@ -1,7 +1,5 @@
 from django.db import models
-from django.forms import ModelForm
 from django import forms
-from django.forms import ModelForm
 
 class Route(models.Model):
     #route_id = models.AutoField(primary_key=True)
@@ -14,7 +12,6 @@ class Route(models.Model):
         return self.route_name
 
 class Bus(models.Model):
-    # bus_id = models.AutoField(primary_key=True)
     license_number = models.CharField(max_length=12)
     imeib = models.CharField(max_length=25)
     route_id = models.ForeignKey(Route, null=True, blank=True)
@@ -27,7 +24,6 @@ class Route_Stop(models.Model):
     stop_name = models.CharField(max_length=25)
     latitude = models.CharField(max_length=25)
     longitude = models.CharField(max_length=25)
-    # route = models.ForeignKey(Route)
     route = models.ForeignKey(Route, related_name='stops')
 
     def __unicode__(self):

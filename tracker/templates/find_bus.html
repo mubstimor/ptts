@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block pagetitle %}Find a Bus{% endblock %}
+{% csrf_token %}
 
 {% block breadcrumb %}
     <div class="breadcrumb">
@@ -94,8 +95,49 @@
                                     $(document).ready(function(){
                                         $("#getRoute").change(function(){
                                             var Rid=$(this).val();
+
+                                             $("#check").html('<img src="static/img/loader.gif" align="absmiddle">&nbsp;Loading bus data...');
+
                                             $('#printHere').html(Rid);
                                             document.getElementById("admDivCheck").style.display = "block";
+
+
+                                              function getCookie(name) {
+                                                var cookieValue = null;
+                                                if (document.cookie && document.cookie != '') {
+                                                    var cookies = document.cookie.split(';');
+                                                    for (var i = 0; i < cookies.length; i++) {
+                                                        var cookie = jQuery.trim(cookies[i]);
+                                                        // Does this cookie string begin with the name we want?
+                                                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                                return cookieValue;
+                                            }
+
+                                               $.ajax
+                                                ({
+                                                type: "GET",
+                                                url: "/getbuslocations/"+Rid,
+                                                data: {'route':Rid,'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
+                                                contentType: 'application/json',
+                                                cache: false,
+                                                success: function(html)
+                                                {
+                                                $("#check").html(' ');
+                                                $(".busdata").html(html);
+                                                },
+                                                    error: function(xhr, textStatus, thrownError){
+                                                        alert("xhr status: " + xhr.statusText);
+                                                    }
+                                                });
+                                             return false;
+
+
+
 
 {#                                        $.ajax({#}
 {#                                            url: '/rstops', //Process Route Stops#}
@@ -120,19 +162,21 @@
                             <h2 class="title"><span>Choose Route</span></h2>
                         	<p>
 
-									<select id="getRoute" onchange="RouteSelectCheck(this);">
+									<select id="getRoute" name="route">
 											<option value="route"> Select Route </option>
 											{% for route in routes %}
 											<option id="route_id" value="{{route.id }}">{{ route.route_name }}</option>
 											 {%  endfor %}
 									</select>
 
-
 							</p>
-{#                        <p> Locations {% for location in locationdata %}#}
-{#                            {{location.latitude}} {{location.longitude}}#}
-{#                            {% endfor %}#}
+                        <p name="busdata">
+                            Ajax loaded data
+
                         </p>
+                        <span id='check'></span>
+
+
                         </div>
                         <div id="admDivCheck" class="span4" style="display:block;">
                                <h4>STOPS</h4>
