@@ -33,8 +33,8 @@ class coordinate(models.Model):
     imei = models.CharField(max_length=25)
     latitude = models.CharField(max_length=25)
     longitude =models.CharField(max_length=25)
-    bus_id = models.ForeignKey(Bus, null=True, blank=True)
     route_id = models.ForeignKey(Route, null=True, blank=True)
+    bus_id = models.ForeignKey(Bus, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True, blank=False)
 
     def __unicode__(self):

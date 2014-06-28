@@ -29,10 +29,11 @@ class BusSerializer(serializers.HyperlinkedModelSerializer):
         model = Bus
         fields = ('id', 'license_number','imeib', 'route_id')
 
-class CordinateSerializer(serializers.HyperlinkedModelSerializer):
+class CordinateSerializer(serializers.ModelSerializer):
+    # bus_id = serializers.PrimaryKeyRelatedField(read_only=True)
     class Meta:
         model =coordinate
-        fields = ('bus_id', 'route_id', 'latitude', 'longitude','date_added')
+        fields = ('id','bus_id', 'route_id', 'latitude', 'longitude','date_added')
 
 class StopSerializer(serializers.ModelSerializer):
     stops = RouteStopSerializer(many=True)
