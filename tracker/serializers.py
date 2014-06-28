@@ -24,7 +24,7 @@ class RouteStopSerializer(serializers.HyperlinkedModelSerializer):
         model = Route_Stop
         fields = ('id', 'stop_name', 'latitude','longitude')
 
-class BusSerializer(serializers.HyperlinkedModelSerializer):
+class BusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bus
         fields = ('id', 'license_number','imeib', 'route_id')
