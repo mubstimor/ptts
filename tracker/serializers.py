@@ -27,7 +27,7 @@ class RouteStopSerializer(serializers.ModelSerializer):
 class BusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bus
-        fields = ('license_number','imeib', 'route_id')
+        fields = ('id','license_number','imeib', 'route_id')
 
 class CordinateSerializer(serializers.ModelSerializer):
     # bus_id = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
