@@ -84,9 +84,11 @@
                                                 {
 {#                                                    alert("Response "+JSON.stringify(html));#}
                                                     var arr = html;
+
                                                     i;
                                                     for (i = 0; i < arr.length; ++i) {
-                                                        console.log(arr[i].bus_id);
+                                                        console.log("Array is of size :"+arr.length);
+                                                        console.log(arr[i].bus_id +" at "+arr[i].latitude);
                                                         var point = new google.maps.LatLng(arr[i].latitude,arr[i].longitude);
                                                     var marker = new google.maps.Marker({
                                                     position: point,

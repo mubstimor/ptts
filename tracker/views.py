@@ -218,7 +218,7 @@ def get_currentBusLocations(request, route):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = CordinateSerializer(snippet, many=True)
+        serializer = LocationSerializer(snippet, many=True)
         return Response(serializer.data)
 
 @api_view(['GET'])

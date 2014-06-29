@@ -14,12 +14,12 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         model = Group
         fields = ('url', 'name')
 
-class RouteSerializer(serializers.HyperlinkedModelSerializer):
+class RouteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Route
         fields = ('id', 'route_name', 'route_start','route_end')
 
-class RouteStopSerializer(serializers.HyperlinkedModelSerializer):
+class RouteStopSerializer(serializers.ModelSerializer):
     class Meta:
         model = Route_Stop
         fields = ('id', 'stop_name', 'latitude','longitude')
@@ -27,10 +27,16 @@ class RouteStopSerializer(serializers.HyperlinkedModelSerializer):
 class BusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bus
-        fields = ('id', 'license_number','imeib', 'route_id')
+        fields = ('license_number','imeib', 'route_id')
 
 class CordinateSerializer(serializers.ModelSerializer):
-    # bus_id = serializers.PrimaryKeyRelatedField(read_only=True)
+    # bus_id = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    class Meta:
+        model =coordinate
+        fields = ('id','bus_id', 'route_id', 'latitude', 'longitude','date_added')
+
+class LocationSerializer(serializers.HyperlinkedModelSerializer):
+    # bus_id = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model =coordinate
         fields = ('id','bus_id', 'route_id', 'latitude', 'longitude','date_added')
