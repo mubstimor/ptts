@@ -38,7 +38,7 @@ class coordinate(models.Model):
     date_added = models.DateTimeField(auto_now_add=True, blank=False)
 
     def __unicode__(self):
-        return self.latitude
+        return self.imei
 
 class Contact(models.Model):
     subject = forms.CharField(max_length=100)
