@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/about.html" afterPath="$PROJECT_DIR$/tracker/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/base.html" afterPath="$PROJECT_DIR$/tracker/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/benefits.html" afterPath="$PROJECT_DIR$/tracker/templates/benefits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/contact.html" afterPath="$PROJECT_DIR$/tracker/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/demo.html" afterPath="$PROJECT_DIR$/tracker/templates/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/footer.html" afterPath="$PROJECT_DIR$/tracker/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/forms.py" afterPath="$PROJECT_DIR$/tracker/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/get_started.html" afterPath="$PROJECT_DIR$/tracker/templates/get_started.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/admin.py" afterPath="$PROJECT_DIR$/tracker/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/settings.py" afterPath="$PROJECT_DIR$/tracking/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.5215827" vertical-offset="550" max-vertical-offset="3015">
+            <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="-12.083333" vertical-offset="550" max-vertical-offset="3015">
               <folding />
             </state>
           </provider>
@@ -89,33 +78,16 @@
         <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="90" column="14" selection-start="5388" selection-end="5388" vertical-scroll-proportion="-20.458334" vertical-offset="859" max-vertical-offset="1440">
-              <folding>
-                <marker date="1404105570684" expanded="true" signature="40:3109" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="70:3082" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="101:3066" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="138:687" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="246:659" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="357:577" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="727:1972" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="849:1945" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="2013:3045" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="2099:2997" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="2129:2551" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="2584:2967" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3154:5387" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3185:5372" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3222:5353" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3257:5329" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3295:3564" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3608:5302" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3664:5243" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3714:4146" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="3779:4107" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="4202:4562" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="4240:4523" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="4757:5208" placeholder="..." />
-                <marker date="1404105570684" expanded="true" signature="4792:5172" placeholder="..." />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="20" selection-start="655" selection-end="655" vertical-scroll-proportion="0.45531198" vertical-offset="0" max-vertical-offset="593">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +104,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="14" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.0" vertical-offset="1623" max-vertical-offset="2865">
+            <state line="137" column="46" selection-start="3869" selection-end="3869" vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="2865">
               <folding />
             </state>
           </provider>
@@ -154,8 +126,6 @@
         <option value="$PROJECT_DIR$/tracker/templates/header.html" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
         <option value="$PROJECT_DIR$/tracker/serializers.py" />
-        <option value="$PROJECT_DIR$/tracker/admin.py" />
-        <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/forms.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracker/templates/contact.html" />
@@ -167,6 +137,8 @@
         <option value="$PROJECT_DIR$/tracker/models.py" />
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+        <option value="$PROJECT_DIR$/tracking/settings.py" />
+        <option value="$PROJECT_DIR$/tracker/admin.py" />
       </list>
     </option>
   </component>
@@ -717,11 +689,6 @@
         <state line="39" column="4" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="780" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="39" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
@@ -1063,20 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="14" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.0" vertical-offset="1623" max-vertical-offset="2865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="18" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="3750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="0" selection-start="3271" selection-end="3271" vertical-scroll-proportion="-22.958334" vertical-offset="259" max-vertical-offset="1320">
@@ -1091,39 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="14" selection-start="5388" selection-end="5388" vertical-scroll-proportion="-20.458334" vertical-offset="859" max-vertical-offset="1440">
-          <folding>
-            <marker date="1404105570684" expanded="true" signature="40:3109" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="70:3082" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="101:3066" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="138:687" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="246:659" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="357:577" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="727:1972" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="849:1945" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="2013:3045" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="2099:2997" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="2129:2551" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="2584:2967" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3154:5387" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3185:5372" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3222:5353" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3257:5329" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3295:3564" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3608:5302" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3664:5243" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3714:4146" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="3779:4107" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="4202:4562" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="4240:4523" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="4757:5208" placeholder="..." />
-            <marker date="1404105570684" expanded="true" signature="4792:5172" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="0" selection-start="2918" selection-end="2918" vertical-scroll-proportion="100.916664" vertical-offset="3277" max-vertical-offset="4050">
@@ -1133,7 +1053,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.5215827" vertical-offset="550" max-vertical-offset="3015">
+        <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="-12.083333" vertical-offset="550" max-vertical-offset="3015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="18" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="46" selection-start="3869" selection-end="3869" vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="14" selection-start="5388" selection-end="5388" vertical-scroll-proportion="-20.458334" vertical-offset="859" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="655" selection-end="655" vertical-scroll-proportion="0.45531198" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
