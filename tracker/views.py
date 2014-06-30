@@ -8,7 +8,7 @@ from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from tracker.forms import ContactForm
+from tracker.forms import ContactForm, QuickContactForm
 from tracker.models import *
 from tracker.serializers import *
 from rest_framework.decorators import api_view
@@ -51,6 +51,32 @@ def contact(request):
     else:
         form = ContactForm() # An unbound form
         return render_to_response('contact.html', {'form': form, }, context)
+
+def quickContact(request):
+    context = RequestContext(request)
+    if request.method == 'POST':
+        form = QuickContactForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+                subject = form.cleaned_data['subject']
+                name = form.cleaned_data['name']
+                message = form.cleaned_data['message']
+                sender = form.cleaned_data['sender']
+                cc_myself = form.cleaned_data['cc_myself']
+                recipients = ['info@example.com']
+
+                if cc_myself:
+                    recipients.append(sender)
+
+                    from django.core.mail import send_mail
+                    send_mail(subject, message, sender, recipients)
+                    #return render_to_response("contact.html")
+                    return HttpResponseRedirect('/thankyou/') # Redirect after POST
+                else:
+                    return HttpResponse('Make sure all fields are entered and valid.')
+
+    else:
+        form = QuickContactForm() # An unbound form
+        return render_to_response('footer.html', {'form': form, }, context)
 
 def thankyou(request):
     return render_to_response('thankyou.html')

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DjangoModelDependency</ID>
+  <OriginalElement>#tracking</OriginalElement>
+  <nodes>
+    <node x="0.0" y="202.0">tracker.models.Bus</node>
+    <node x="329.0" y="214.0">tracker.models.Route_Stop</node>
+    <node x="242.4" y="404.0">tracker.models.coordinate</node>
+    <node x="267.56666666666666" y="0.0">tracker.models.Route</node>
+    <node x="0.0" y="625.0">tracker.models.Contact</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tracker.models.Bus" target="tracker.models.Route">
+      <point x="0.0" y="-76.0" />
+      <point x="154.5" y="177.0" />
+      <point x="321.23333333333335" y="177.0" />
+      <point x="-107.33333333333331" y="76.0" />
+    </edge>
+    <edge source="tracker.models.coordinate" target="tracker.models.Route">
+      <point x="70.0" y="-88.0" />
+      <point x="452.4" y="379.0" />
+      <point x="577.5" y="379.0" />
+      <point x="577.5" y="177.0" />
+      <point x="535.9000000000001" y="177.0" />
+      <point x="107.33333333333337" y="76.0" />
+    </edge>
+    <edge source="tracker.models.Route_Stop" target="tracker.models.Route">
+      <point x="0.0" y="-64.0" />
+      <point x="448.0" y="177.0" />
+      <point x="428.56666666666666" y="177.0" />
+      <point x="0.0" y="76.0" />
+    </edge>
+    <edge source="tracker.models.coordinate" target="tracker.models.Bus">
+      <point x="-70.0" y="-88.0" />
+      <point x="312.4" y="379.0" />
+      <point x="154.5" y="379.0" />
+      <point x="0.0" y="76.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7890520694259012" x="295.0" y="364.5" />
+  <SelectedNodes>
+    <node>tracker.models.Contact</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+</Diagram>
+

@@ -37,6 +37,7 @@
                                 // Coordinates to center the map
                                 myLatlng = new google.maps.LatLng(0.332335, 32.579842);
 
+
                                 // options for the map
                                 var mapOptions = {
                                     zoom: current_zoom,
@@ -45,6 +46,16 @@
                                 };
                                 // Draw the map
                                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+                                console.log( "Accessing location from lat"+userLat+" long "+userLong);
+                                  var userPoint = new google.maps.LatLng(userLat,userLong);
+                                                    var userMarker = new google.maps.Marker({
+                                                    position: userPoint,
+                                                    icon: '/static/img/person.png',
+                                                    map: map,
+                                                    title: "Your Location"
+                                                    });
 
                                 }
                              }

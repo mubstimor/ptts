@@ -18,7 +18,10 @@
                     </div>
                     <div class="span4">
                     	<h2 class="title">Get in touch!</h2>
-                        <form action="/contact-us/" method="post">{% csrf_token %}
+                        <form action="/contact/" method="post">
+{#                            {% csrf_token %}#}
+{#                            {{ form.non_field_errors }}#}
+{#                            {{ form.as_p }}#}
                         	<input class="span3" type="text" name="name" id="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
                             <input class="span3" type="text" name="email" id="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
                             <textarea name="message" id="message" class="span3" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';" >Message</textarea>

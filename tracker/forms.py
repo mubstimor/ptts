@@ -19,3 +19,19 @@ class ContactForm(forms.Form):
         self.fields['subject'].widget.attrs['class'] = 'span7'
         self.fields['sender'].widget.attrs['class'] = 'span7'
         self.fields['name'].widget.attrs['class'] = 'span7'
+
+class QuickContactForm(forms.Form):
+    subject = forms.CharField(max_length=100)
+    #sender = forms.EmailField()
+    sender = forms.EmailField()
+    name = forms.CharField()
+    cc_myself = forms.BooleanField(required=False)
+    message = forms.CharField(
+        max_length=255,
+        widget=forms.Textarea(attrs={'class': 'span3'},),)
+
+    def __init__(self, *args, **kwargs):
+        super(QuickContactForm, self).__init__(*args, **kwargs)
+        self.fields['subject'].widget.attrs['class'] = 'span3'
+        self.fields['sender'].widget.attrs['class'] = 'span3'
+        self.fields['name'].widget.attrs['class'] = 'span3'
