@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/base.html" afterPath="$PROJECT_DIR$/tracker/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,19 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="-12.083333" vertical-offset="550" max-vertical-offset="3015">
+            <state line="107" column="72" selection-start="5851" selection-end="5851" vertical-scroll-proportion="0.44964027" vertical-offset="1355" max-vertical-offset="3030">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="30" selection-start="644" selection-end="644" vertical-scroll-proportion="0.2967626" vertical-offset="0" max-vertical-offset="4050">
+            <state line="33" column="36" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-8.166667" vertical-offset="299" max-vertical-offset="4050">
               <folding />
             </state>
           </provider>
@@ -134,10 +134,10 @@
         <option value="$PROJECT_DIR$/tracker/templates/get_started.html" />
         <option value="$PROJECT_DIR$/tracker/templates/footer.html" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
-        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/admin.py" />
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
+        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
       </list>
     </option>
   </component>
@@ -1071,16 +1071,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+    <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="74" selection-start="2396" selection-end="2396" vertical-scroll-proportion="-12.083333" vertical-offset="550" max-vertical-offset="3015">
+        <state line="33" column="36" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-8.166667" vertical-offset="299" max-vertical-offset="4050">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="644" selection-end="644" vertical-scroll-proportion="0.2967626" vertical-offset="0" max-vertical-offset="4050">
+        <state line="107" column="72" selection-start="5851" selection-end="5851" vertical-scroll-proportion="0.44964027" vertical-offset="1355" max-vertical-offset="3030">
           <folding />
         </state>
       </provider>
