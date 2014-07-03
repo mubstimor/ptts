@@ -18,25 +18,25 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'tracker', ['Route'])
 
-        # Adding model 'Bus'
-        db.create_table(u'tracker_bus', (
+        # Adding model 'Buse'
+        db.create_table(u'tracker_buse', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('license_number', self.gf('django.db.models.fields.CharField')(max_length=12)),
             ('imeib', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('route_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Route'], null=True, blank=True)),
             ('date_added', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
         ))
-        db.send_create_signal(u'tracker', ['Bus'])
+        db.send_create_signal(u'tracker', ['Buse'])
 
-        # Adding model 'Route_Stop'
-        db.create_table(u'tracker_route_stop', (
+        # Adding model 'Stop'
+        db.create_table(u'tracker_stop', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('stop_name', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('latitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('longitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('route', self.gf('django.db.models.fields.related.ForeignKey')(related_name='stops', to=orm['tracker.Route'])),
         ))
-        db.send_create_signal(u'tracker', ['Route_Stop'])
+        db.send_create_signal(u'tracker', ['Stop'])
 
         # Adding model 'coordinate'
         db.create_table(u'tracker_coordinate', (
@@ -44,8 +44,8 @@ class Migration(SchemaMigration):
             ('imei', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('latitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('longitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
-            ('bus_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Bus'], null=True, blank=True)),
             ('route_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Route'], null=True, blank=True)),
+            ('bus_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Buse'], null=True, blank=True)),
             ('date_added', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
         ))
         db.send_create_signal(u'tracker', ['coordinate'])
@@ -61,11 +61,11 @@ class Migration(SchemaMigration):
         # Deleting model 'Route'
         db.delete_table(u'tracker_route')
 
-        # Deleting model 'Bus'
-        db.delete_table(u'tracker_bus')
+        # Deleting model 'Buse'
+        db.delete_table(u'tracker_buse')
 
-        # Deleting model 'Route_Stop'
-        db.delete_table(u'tracker_route_stop')
+        # Deleting model 'Stop'
+        db.delete_table(u'tracker_stop')
 
         # Deleting model 'coordinate'
         db.delete_table(u'tracker_coordinate')
@@ -75,8 +75,8 @@ class Migration(SchemaMigration):
 
 
     models = {
-        u'tracker.bus': {
-            'Meta': {'object_name': 'Bus'},
+        u'tracker.buse': {
+            'Meta': {'object_name': 'Buse'},
             'date_added': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'imeib': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
@@ -89,7 +89,7 @@ class Migration(SchemaMigration):
         },
         u'tracker.coordinate': {
             'Meta': {'object_name': 'coordinate'},
-            'bus_id': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['tracker.Bus']", 'null': 'True', 'blank': 'True'}),
+            'bus_id': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['tracker.Buse']", 'null': 'True', 'blank': 'True'}),
             'date_added': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'imei': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
@@ -105,8 +105,8 @@ class Migration(SchemaMigration):
             'route_name': ('django.db.models.fields.CharField', [], {'max_length': '30'}),
             'route_start': ('django.db.models.fields.CharField', [], {'max_length': '25'})
         },
-        u'tracker.route_stop': {
-            'Meta': {'object_name': 'Route_Stop'},
+        u'tracker.stop': {
+            'Meta': {'object_name': 'Stop'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'latitude': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
             'longitude': ('django.db.models.fields.CharField', [], {'max_length': '25'}),

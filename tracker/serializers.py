@@ -21,12 +21,12 @@ class RouteSerializer(serializers.ModelSerializer):
 
 class RouteStopSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Route_Stop
+        model = Stop
         fields = ('id', 'stop_name', 'latitude','longitude')
 
 class BusSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bus
+        model = Buse
         fields = ('id','license_number','imeib', 'route_id')
 
 class CordinateSerializer(serializers.ModelSerializer):

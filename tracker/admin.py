@@ -5,7 +5,7 @@ from tracker.models import *
 
 class BusAdmin(admin.ModelAdmin):
     list_display = ('license_number','imeib','date_added', 'route_id')
-admin.site.register(Bus, BusAdmin)
+admin.site.register(Buse, BusAdmin)
 
 class RouteAdmin(admin.ModelAdmin):
     frontend_editable_fields = ('route_name','route_start')
@@ -14,7 +14,7 @@ admin.site.register(Route, RouteAdmin)
 
 class Route_StopAdmin(admin.ModelAdmin):
     list_display = ('stop_name','latitude','longitude')
-admin.site.register(Route_Stop, Route_StopAdmin)
+admin.site.register(Stop, Route_StopAdmin)
 
 class CordinateAdmin(admin.ModelAdmin):
     list_display = ('bus_id','route_id','latitude','longitude', 'date_added')

@@ -26,6 +26,9 @@ def home(request):
 def about(request):
     return render_to_response("about.html")
 
+def time(request):
+    return render_to_response("poptime.html")
+
 def contact(request):
     context = RequestContext(request)
     if request.method == 'POST':
@@ -97,7 +100,7 @@ def routes(request):
     return render_to_response("routes.html", {'routes': Route.objects.all()} )
 
 def route_stops(request, route_id = 1):
-	return render_to_response('route_stops.html', {'route_stops': Route_Stop.objects.filter(id = route_id) })
+	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(id = route_id) })
 
 def find_bus(request):
     route = Route.objects.all()
@@ -110,7 +113,7 @@ def find_bus_location(request):
     return render_to_response("find_bus.html", locationdata)
 
 def bus_route_details(request):
-    details = Bus.objects.filter(id=1, imei="0.332335").select_related()
+    details = Buse.objects.filter(id=1, imei="0.332335").select_related()
     bus_loc_details = RequestContext(request,{"buslocdetails":details})
     return render_to_response("find_bus.html", bus_loc_details)
 
@@ -126,7 +129,7 @@ def show_results(request):
     return {'locations': locations}
 
 def rstops(request, route_id=1):
-    return ('find_bus.html', {'route_stops': Route_Stop.objects.filter(id = route_id) })
+    return ('find_bus.html', {'route_stops': Stop.objects.filter(id = route_id) })
 
 def get_started(request):
     return render_to_response("get_started.html")
@@ -156,7 +159,7 @@ class BusViewSet(viewsets.ModelViewSet):
      """
      API endpoint that allows routes to be viewed or edited.
      """
-     queryset = Bus.objects.all()
+     queryset = Buse.objects.all()
      serializer_class = BusSerializer
 
 class StopsViewSet(viewsets.ModelViewSet):
@@ -189,8 +192,8 @@ def bus_detail(request, pk):
     Retrieve, update or delete a snippet instance.
     """
     try:
-        snippet = Bus.objects.get(pk=pk)
-    except Bus.DoesNotExist:
+        snippet = Buse.objects.get(pk=pk)
+    except Buse.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
@@ -214,8 +217,8 @@ def search_bus(request, license):
     Retrieve, update or delete a snippet instance.
     """
     try:
-        snippet = Bus.objects.filter(license_number= license)
-    except Bus.DoesNotExist:
+        snippet = Buse.objects.filter(license_number= license)
+    except Buse.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
@@ -253,8 +256,8 @@ def get_stopsOnRoute(request, route):
     Retrieve a snippet instance.
     """
     try:
-        snippet = Route_Stop.objects.filter(route= route)
-    except Route_Stop.DoesNotExist:
+        snippet = Stop.objects.filter(route= route)
+    except Stop.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
