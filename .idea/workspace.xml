@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tracker/templates/poptime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tracker/templates/popup_test.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dbs.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracker/migrations/0002_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracker/migrations/0003_auto__del_contact.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracker/migrations/0004_auto__add_contact.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/tracker/migrations/0001_initial.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/admin.py" afterPath="$PROJECT_DIR$/tracker/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/base.html" afterPath="$PROJECT_DIR$/tracker/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/models.py" afterPath="$PROJECT_DIR$/tracker/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/serializers.py" afterPath="$PROJECT_DIR$/tracker/serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/settings.py" afterPath="$PROJECT_DIR$/tracking/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/urls.py" afterPath="$PROJECT_DIR$/tracking/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/tests.py" afterPath="$PROJECT_DIR$/tracker/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
@@ -44,28 +35,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="42" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="22" selection-start="13505" selection-end="13505" vertical-scroll-proportion="-25.291666" vertical-offset="2873" max-vertical-offset="3630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="popup_test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/popup_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="4" selection-start="1523" selection-end="1553" vertical-scroll-proportion="-13.791667" vertical-offset="209" max-vertical-offset="765">
+            <state line="36" column="4" selection-start="1523" selection-end="1553" vertical-scroll-proportion="-14.333333" vertical-offset="196" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracking/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="151" column="0" selection-start="4178" selection-end="4178" vertical-scroll-proportion="0.3288364" vertical-offset="2055" max-vertical-offset="2865">
               <folding />
             </state>
           </provider>
@@ -74,7 +56,7 @@
       <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1260">
+            <state line="8" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -83,19 +65,17 @@
       <file leaf-file-name="thankyou.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/thankyou.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="30" selection-start="711" selection-end="711" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="510">
+            <state line="21" column="30" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poptime.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="poptime.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.7553957" vertical-offset="660" max-vertical-offset="2340">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="39" column="87" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="2340">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,19 +98,25 @@
               <nodes>
                 <node x="242.4" y="404.0">tracker.models.coordinate</node>
                 <node x="0.0" y="202.0">tracker.models.Buse</node>
-                <node x="302.40000000000003" y="0.0">tracker.models.Route</node>
+                <node x="267.56666666666666" y="0.0">tracker.models.Route</node>
                 <node x="329.0" y="214.0">tracker.models.Stop</node>
-                <node x="0.0" y="625.0">tracker.models.Contact</node>
+                <node x="-120.04050722085242" y="652.7016555125043">tracker.models.Contact</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="tracker.models.coordinate" target="tracker.models.Route">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="70.0" y="-88.0" />
+                  <point x="452.4" y="379.0" />
+                  <point x="577.5" y="379.0" />
+                  <point x="577.5" y="177.0" />
+                  <point x="535.9000000000001" y="177.0" />
+                  <point x="107.33333333333337" y="76.0" />
                 </edge>
                 <edge source="tracker.models.Stop" target="tracker.models.Route">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="-64.0" />
+                  <point x="448.0" y="177.0" />
+                  <point x="428.56666666666666" y="177.0" />
+                  <point x="0.0" y="76.0" />
                 </edge>
                 <edge source="tracker.models.Buse" target="tracker.models.Route">
                   <point x="0.0" y="0.0" />
@@ -141,8 +127,10 @@
                   <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.7580774365821095" x="293.0" y="306.590348714336" />
-              <SelectedNodes />
+              <settings layout="Hierarchic Group" zoom="0.7580774365821095" x="293.0" y="337.0" />
+              <SelectedNodes>
+                <node>tracker.models.Buse</node>
+              </SelectedNodes>
               <Categories>
                 <Category>Fields</Category>
               </Categories>
@@ -153,7 +141,7 @@
       <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="31" selection-start="453" selection-end="453" vertical-scroll-proportion="-0.625" vertical-offset="240" max-vertical-offset="1320">
+            <state line="17" column="31" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -162,7 +150,16 @@
       <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="14" selection-start="5388" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1440">
+            <state line="76" column="57" selection-start="4705" selection-end="4705" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="17" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -182,7 +179,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/tracker/templates/header.html" />
-        <option value="$PROJECT_DIR$/tracker/serializers.py" />
         <option value="$PROJECT_DIR$/tracker/forms.py" />
         <option value="$PROJECT_DIR$/tracker/templates/contact.html" />
         <option value="$PROJECT_DIR$/tracker/templates/about.html" />
@@ -190,23 +186,25 @@
         <option value="$PROJECT_DIR$/tracker/templates/demo.html" />
         <option value="$PROJECT_DIR$/tracker/templates/get_started.html" />
         <option value="$PROJECT_DIR$/tracker/templates/footer.html" />
-        <option value="$PROJECT_DIR$/tracker/admin.py" />
-        <option value="$PROJECT_DIR$/tracking/settings.py" />
         <option value="$PROJECT_DIR$/tracker/templates/popup_test.html" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
-        <option value="$PROJECT_DIR$/tracker/models.py" />
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
         <option value="$PROJECT_DIR$/tracker/templates/poptime.html" />
+        <option value="$PROJECT_DIR$/tracker/tests.py" />
+        <option value="$PROJECT_DIR$/tracker/serializers.py" />
+        <option value="$PROJECT_DIR$/tracker/models.py" />
+        <option value="$PROJECT_DIR$/tracker/admin.py" />
+        <option value="$PROJECT_DIR$/tracking/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -530,16 +528,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3378486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25577688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -548,6 +545,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -592,11 +590,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tracker/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="390" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="213" column="7" selection-start="7198" selection-end="7198" vertical-scroll-proportion="0.0" vertical-offset="3195" max-vertical-offset="3420">
@@ -633,7 +626,9 @@
     <entry file="file://$PROJECT_DIR$/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="870">
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -678,7 +673,9 @@
     <entry file="file://$PROJECT_DIR$/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="27" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="840">
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,11 +741,6 @@
     <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/forms.py">
@@ -1048,27 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="14" selection-start="5388" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="46" selection-start="4024" selection-end="4024" vertical-scroll-proportion="0.0" vertical-offset="2055" max-vertical-offset="2865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DjangoModelDependency/#tracking">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1094,14 +1065,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="453" selection-end="453" vertical-scroll-proportion="-0.625" vertical-offset="240" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3795">
+        <state line="17" column="31" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
@@ -1109,13 +1073,6 @@
     <entry file="file://$PROJECT_DIR$/tracking/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="18" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="42" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
@@ -1128,19 +1085,25 @@
           <nodes>
             <node x="242.4" y="404.0">tracker.models.coordinate</node>
             <node x="0.0" y="202.0">tracker.models.Buse</node>
-            <node x="302.40000000000003" y="0.0">tracker.models.Route</node>
+            <node x="267.56666666666666" y="0.0">tracker.models.Route</node>
             <node x="329.0" y="214.0">tracker.models.Stop</node>
-            <node x="0.0" y="625.0">tracker.models.Contact</node>
+            <node x="-120.04050722085242" y="652.7016555125043">tracker.models.Contact</node>
           </nodes>
           <notes />
           <edges>
             <edge source="tracker.models.coordinate" target="tracker.models.Route">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="70.0" y="-88.0" />
+              <point x="452.4" y="379.0" />
+              <point x="577.5" y="379.0" />
+              <point x="577.5" y="177.0" />
+              <point x="535.9000000000001" y="177.0" />
+              <point x="107.33333333333337" y="76.0" />
             </edge>
             <edge source="tracker.models.Stop" target="tracker.models.Route">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="0.0" y="-64.0" />
+              <point x="448.0" y="177.0" />
+              <point x="428.56666666666666" y="177.0" />
+              <point x="0.0" y="76.0" />
             </edge>
             <edge source="tracker.models.Buse" target="tracker.models.Route">
               <point x="0.0" y="0.0" />
@@ -1151,11 +1114,69 @@
               <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.7580774365821095" x="293.0" y="306.590348714336" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="0.7580774365821095" x="293.0" y="337.0" />
+          <SelectedNodes>
+            <node>tracker.models.Buse</node>
+          </SelectedNodes>
           <Categories>
             <Category>Fields</Category>
           </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="22" selection-start="13505" selection-end="13505" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="3630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/thankyou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="30" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="57" selection-start="4705" selection-end="4705" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="87" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="2340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="17" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="62" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="780">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,40 +1187,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+    <entry file="file://$PROJECT_DIR$/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="22" selection-start="13505" selection-end="13505" vertical-scroll-proportion="-25.291666" vertical-offset="2873" max-vertical-offset="3630">
-          <folding />
+        <state line="48" column="28" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.72006744" vertical-offset="293" max-vertical-offset="945">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/tracker/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/thankyou.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="711" selection-end="711" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="510">
+        <state line="16" column="42" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/popup_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="4" selection-start="1523" selection-end="1553" vertical-scroll-proportion="-13.791667" vertical-offset="209" max-vertical-offset="765">
+        <state line="36" column="4" selection-start="1523" selection-end="1553" vertical-scroll-proportion="-14.333333" vertical-offset="196" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+    <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.7553957" vertical-offset="660" max-vertical-offset="2340">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="151" column="0" selection-start="4178" selection-end="4178" vertical-scroll-proportion="0.3288364" vertical-offset="2055" max-vertical-offset="2865">
+          <folding />
         </state>
       </provider>
     </entry>

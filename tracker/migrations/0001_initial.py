@@ -41,9 +41,9 @@ class Migration(SchemaMigration):
         # Adding model 'coordinate'
         db.create_table(u'tracker_coordinate', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('imei', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('latitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('longitude', self.gf('django.db.models.fields.CharField')(max_length=25)),
+            ('speed', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('route_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Route'], null=True, blank=True)),
             ('bus_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['tracker.Buse'], null=True, blank=True)),
             ('date_added', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
@@ -92,10 +92,10 @@ class Migration(SchemaMigration):
             'bus_id': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['tracker.Buse']", 'null': 'True', 'blank': 'True'}),
             'date_added': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'imei': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
             'latitude': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
             'longitude': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
-            'route_id': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['tracker.Route']", 'null': 'True', 'blank': 'True'})
+            'route_id': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['tracker.Route']", 'null': 'True', 'blank': 'True'}),
+            'speed': ('django.db.models.fields.CharField', [], {'max_length': '25'})
         },
         u'tracker.route': {
             'Meta': {'object_name': 'Route'},
