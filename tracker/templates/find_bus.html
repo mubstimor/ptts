@@ -123,6 +123,8 @@
                                                 return cookieValue;
                                             }
 
+
+
                                                $.ajax
                                                 ({
                                                 type: "GET",
@@ -146,10 +148,10 @@
                                                     map: map,
                                                     title: arr[i].bus_id
                                                     });
+                                                    var busId = (arr[i].bus_id).substring(6).replace('/', '').replace('/', '').trim();
                                                     marker['infowindow']  = new google.maps.InfoWindow({
-                                                    content: "<h1>"+arr[i].bus_id+"</h1>"+
-                                                          "<p>"+ arr[i].latitude+"<br />"+arr[i].longitude+
-                                                            "<br /><a href='/popup?userlat="+userLat+"&userlong="+userLong+"&buslat="+arr[i].latitude+"&buslong="+arr[i].longitude+"' class='popup2'>View Time</a></p>"
+                                                    content: "<h3 id='bus_license'> Bus "+(i+1)+"</h3>"+
+                                                          "<p><a href='/popup?busId="+busId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+arr[i].latitude+"&buslong="+arr[i].longitude+"&speed="+arr[i].speed+"' class='popup2'>Estimate Time</a></p>"
                                                          ,
                                                     maxWidth:230
                                                     });
@@ -235,3 +237,8 @@
             </div>
         </div>
 {% endblock %}
+
+<script type="text/javascript">
+
+
+</script>

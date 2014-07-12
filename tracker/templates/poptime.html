@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 {% block pagetitle %}Estimate Time{% endblock %}
-{% block extra_js %}{% endblock %}
-{##}
-{#{% block breadcrumb %}#}
-{#    <div class="breadcrumb">#}
-{#        	<div class="wrap">#}
-{#            	<div class="container">#}
-{#                    <a href="/">Home</a> / <a href="/contact"> Contact</a><span>/</span>Thank you#}
-{#            </div>#}
-{#            </div>#}
-{#        </div>#}
-{#{% endblock %}#}
+{#{% block extra_js %}{% endblock %}#}
 
 {% block main_content %}
     <div class="wrap">
@@ -24,11 +14,56 @@
                                       return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
                                     }
 
+                                var busId = getURLParameter('busId').trim();
                                 var userlat = getURLParameter('userlat').trim();
                                 var userlong = getURLParameter('userlong').trim();
                                 var buslat = getURLParameter('buslat').trim();
                                 var buslong = getURLParameter('buslong').trim();
+                                var speed = getURLParameter('speed').trim();
 {#                                alert(userlat);#}
+
+
+                                     function getCookie(name) {
+                                                var cookieValue = null;
+                                                if (document.cookie && document.cookie != '') {
+                                                    var cookies = document.cookie.split(';');
+                                                    for (var i = 0; i < cookies.length; i++) {
+                                                        var cookie = jQuery.trim(cookies[i]);
+                                                        // Does this cookie string begin with the name we want?
+                                                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                                return cookieValue;
+                                            }
+
+
+
+                                         $.ajax
+                                        ({
+                                        type: "GET",
+                                        url: "/buses/"+busId,
+                                        data: {'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
+                                        contentType: 'application/json',
+                                        cache: false,
+                                        success: function(html)
+                                        {
+                                            var licenseNumber;
+                                            var busarr = html;
+                                            console.log("bus data "+busarr.license_number);
+                                            licenseNumber = busarr.license_number;
+                                            $("#plate").html(busarr.license_number);
+{#                                            alert(busarr.license_number);#}
+                                             return busarr.license_number;
+                                        },
+                                            error: function(xhr, textStatus, thrownError){
+                                                alert("xhr status: " + xhr.statusText);
+                                            }
+                                        });
+
+
                                 var map;
                                 var geocoder;
                                 var bounds = new google.maps.LatLngBounds();
@@ -39,8 +74,8 @@
 {#                                var origin1 = new google.maps.LatLng(0.331612, 32.573512);#}
 {#                                var destinationB = new google.maps.LatLng(0.355471, 32.613321);#}
 
-                                var destinationIcon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000';
-                                var originIcon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000';
+                                var destinationIcon = '/static/img/person.png';
+                                var originIcon = '/static/img/travel_bus.png';
 
                                 function initialize() {
                                   var opts = {
@@ -78,10 +113,19 @@
                                       var results = response.rows[i].elements;
                                       addMarker(origins[i], false);
                                       for (var j = 0; j < results.length; j++) {
+
+                                         var googleTime = results[j].duration.text.substring(0,2).trim();
+                                         var distance = results[j].distance.text.substring(0,4).trim();
+
+                                          var pttsTime = (distance/speed) * 60;
+                                          var roundedOffTime = Math.round(pttsTime * 100) / 100;
+                                          var ceilTime = Math.ceil(roundedOffTime);
+
                                         addMarker(destinations[j], true);
                                         outputDiv.innerHTML += origins[i] + ' to ' + destinations[j]
                                             + ': ' + results[j].distance.text + ' in '
-                                            + results[j].duration.text + '<br>';
+                                            + ceilTime + ' mins <br>';
+
                                       }
                                     }
                                   }
@@ -122,6 +166,7 @@
 
                                 $(function() {
                                     calculateDistances();
+
                                 });
 
                             </script>
@@ -133,9 +178,10 @@
                         <div class="span3">
                             <h2 class="title"><span>Get Time</span></h2>
                             <pre>
-                                  Click the button to get an  estimate of how long it will take for a bus to get to you!
+                                <p>License Number : <span id="plate"></span> <br/>Travelling at <script>document.write(speed)</script> km/hr</p>
+
                             </pre>
-                            <p><button type="button" onclick="calculateDistances();">Calculate distances</button></p>
+                            <p><button type="button" onclick="calculateDistances();">Calculate distances</button><br/></p>
                             <div id="outputDiv"></div>
 
                         </div>
