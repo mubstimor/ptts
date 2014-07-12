@@ -182,11 +182,13 @@
                                                 success: function(html)
                                                 {
                                                     var arr = html;
+                                                    var stops = '';
                                                     i;
                                                     for (i = 0; i < arr.length; ++i) {
                                                         console.log(arr[i].stop_name);
-                                                        $("#printHere").html(arr[i].stop_name)
+                                                        stops += arr[i].stop_name+"<br/>";
                                                         } //end forloop
+                                                    $("#printHere").html(stops)
 
                                                 },
                                                     error: function(xhr, textStatus, thrownError){
@@ -223,13 +225,6 @@
                         <div id="admDivCheck" class="span2" style="display:block;">
                                <h4>STOPS</h4>
                                 <span id="printHere">route stops..</span>
-
-                        {% for route_stop in stops %}
-                          <tr>
-                            <td>{{ route_stop.id }}</td>
-                            <td>{{ route_stop.stop_name }}</td>
-                          </tr>
-                        {% endfor %}
 
                         </div>
                     </div>

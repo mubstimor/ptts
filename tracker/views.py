@@ -66,7 +66,7 @@ def quickContact(request):
                 message = form.cleaned_data['message']
                 sender = form.cleaned_data['sender']
                 cc_myself = form.cleaned_data['cc_myself']
-                recipients = ['info@example.com']
+                recipients = ['info@tracker.com']
 
                 if cc_myself:
                     recipients.append(sender)
