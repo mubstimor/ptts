@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
-    </list>
+    <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="" />
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -440,7 +438,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
