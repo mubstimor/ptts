@@ -1,3 +1,4 @@
+from django.contrib.admin.util import lookup_needs_distinct
 from django.db import models
 from django import forms
 from django.utils import timezone
@@ -47,6 +48,14 @@ class coordinate(models.Model):
 
     def __unicode__(self):
         return self.latitude
+
+    def was_added_recently(self):
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.date_added <= now
+
+    class Meta:
+        get_latest_by = 'date_added'
+
 
 class Contact(models.Model):
     subject = forms.CharField(max_length=100)

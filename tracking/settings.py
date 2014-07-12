@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['*']
 
 LANGUAGE_CODE = 'en-us'
 
+TIME_ZONE = 'Africa/Kampala'
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -141,14 +143,14 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
 REST_FRAMEWORK = {
@@ -179,7 +181,7 @@ EMAIL_USE_TLS = True
 # Your access token: Access token
 TWITTER_OAUTH_TOKEN = '182486079-cH8lnyFVmQiSMmCOoztiOrUw5KRhE9569nMd3qxr'
 # Your access token: Access token secret
-TWITTER_OAUTH_SECRET = ' HomPxPxJHmP9DMAaMqlmIZEiYhqni0TP6a4cDwc40IHtO'
+TWITTER_OAUTH_SECRET = 'HomPxPxJHmP9DMAaMqlmIZEiYhqni0TP6a4cDwc40IHtO'
 # OAuth settings: Consumer key
 TWITTER_CONSUMER_KEY = 'J31R2cSg6dDPE7fDovzCXRZeQ'
 # OAuth settings: Consumer secret

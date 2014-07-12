@@ -16,6 +16,7 @@ from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
 from django import template
+from django.db.models import Max
 
 register = template.Library()
 
@@ -242,7 +243,9 @@ def get_currentBusLocations(request, route):
     Retrieve a snippet instance.
     """
     try:
-        snippet = coordinate.objects.filter(route_id= route)
+        today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
+        today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
+        snippet = coordinate.objects.order_by("-date_added").filter(route_id= route,date_added__range=(today_min, today_max)).distinct('bus_id')
     except coordinate.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
