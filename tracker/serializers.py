@@ -35,7 +35,7 @@ class CordinateSerializer(serializers.ModelSerializer):
         model =coordinate
         fields = ('id', 'bus_id', 'route_id', 'latitude', 'longitude','speed','date_added')
 
-class LocationSerializer(serializers.ModelSerializer):
+class LocationSerializer(serializers.HyperlinkedModelSerializer):
     # bus_id = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model =coordinate
