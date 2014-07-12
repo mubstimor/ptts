@@ -170,11 +170,12 @@ REST_FRAMEWORK = {
 }
 
 #GMAIL SETTINGSsyv
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mubstimor@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['DJANGO_EMAIL_PASSWORD']
-EMAIL_PORT = 587
+EMAIL_HOST = 'localhost'
+# EMAIL_HOST_USER = 'mubstimor@gmail.com'
+# EMAIL_HOST_PASSWORD = os.environ['DJANGO_EMAIL_PASSWORD']
+EMAIL_PORT = 1025
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL='info@tracker.com'
 
 #TWITTER SETINGS
 
