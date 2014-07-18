@@ -17,24 +17,27 @@ from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth import authenticate, login
 from django import template
 from django.db.models import Max
-
-register = template.Library()
+from datetime import timedelta
+from datetime import datetime as dtdatetime
 
 # Applications' views here.
 def home(request):
     return  render_to_response("index.html")
 
+
 def about(request):
     return render_to_response("about.html")
+
 
 def time(request):
     return render_to_response("poptime.html")
 
+
 def contact(request):
     context = RequestContext(request)
     if request.method == 'POST':
-        form = ContactForm(request.POST) # A form bound to the POST data
-        if form.is_valid(): # All validation rules pass
+        form = ContactForm(request.POST)  #A form bound to the POST data
+        if form.is_valid():  #All validation rules pass
                 subject = form.cleaned_data['subject']
                 name = form.cleaned_data['name']
                 message = form.cleaned_data['message']
@@ -56,6 +59,7 @@ def contact(request):
         form = ContactForm() # An unbound form
         return render_to_response('contact.html', {'form': form, }, context)
 
+
 def quickContact(request):
     context = RequestContext(request)
     if request.method == 'POST':
@@ -73,50 +77,56 @@ def quickContact(request):
 
                     from django.core.mail import send_mail
                     send_mail(subject, message, sender, recipients)
-                    #return render_to_response("contact.html")
                     return HttpResponseRedirect('/thankyou/') # Redirect after POST
                 else:
                     return HttpResponse('Make sure all fields are entered and valid.')
 
     else:
-        form = QuickContactForm() # An unbound form
+        form = QuickContactForm()  #An unbound form
         return render_to_response('footer.html', {'form': form, }, context)
+
 
 def thankyou(request):
     return render_to_response('thankyou.html')
 
-#def contact(request):
-#    return render_to_response("contact.html")
 
 def demo(request):
     return render_to_response("demo.html")
 
+
 def benefits(request):
     return render_to_response("benefits.html")
+
 
 def gps(request):
     return render_to_response("gps.html")
 
+
 def routes(request):
     return render_to_response("routes.html", {'routes': Route.objects.all()} )
 
-def route_stops(request, route_id = 1):
-	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(id = route_id) })
+
+def route_stops(request, route_id=1):
+	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(id = route_id)})
+
 
 def find_bus(request):
     route = Route.objects.all()
     variables = RequestContext(request,{"routes":route})
     return render_to_response("find_bus.html", variables)
 
+
 def find_bus_location(request):
     location = coordinate.objects.all()
     locationdata = RequestContext(request,{"locationdata":location})
     return render_to_response("find_bus.html", locationdata)
 
+
 def bus_route_details(request):
     details = Buse.objects.filter(id=1, imei="0.332335").select_related()
     bus_loc_details = RequestContext(request,{"buslocdetails":details})
     return render_to_response("find_bus.html", bus_loc_details)
+
 
 def current_bus_location(request):
     location = coordinate.objects.select_related()
@@ -124,16 +134,13 @@ def current_bus_location(request):
     return render_to_response("find_bus.html", buslocations)
 
 
-@register.inclusion_tag('find_bus.html')
-def show_results(request):
-    locations = coordinate.objects.all()
-    return {'locations': locations}
-
 def rstops(request, route_id=1):
     return ('find_bus.html', {'route_stops': Stop.objects.filter(id = route_id) })
 
+
 def get_started(request):
     return render_to_response("get_started.html")
+
 
 class UserViewSet(viewsets.ModelViewSet):
      """
@@ -142,12 +149,14 @@ class UserViewSet(viewsets.ModelViewSet):
      queryset = User.objects.all()
      serializer_class = UserSerializer
 
+
 class GroupViewSet(viewsets.ModelViewSet):
      """
      API endpoint that allows groups to be viewed or edited.
      """
      queryset = Group.objects.all()
      serializer_class = GroupSerializer
+
 
 class RouteViewSet(viewsets.ModelViewSet):
      """
@@ -156,6 +165,7 @@ class RouteViewSet(viewsets.ModelViewSet):
      queryset = Route.objects.all()
      serializer_class = RouteSerializer
 
+
 class BusViewSet(viewsets.ModelViewSet):
      """
      API endpoint that allows routes to be viewed or edited.
@@ -163,12 +173,14 @@ class BusViewSet(viewsets.ModelViewSet):
      queryset = Buse.objects.all()
      serializer_class = BusSerializer
 
+
 class StopsViewSet(viewsets.ModelViewSet):
      """
      API endpoint that allows stops to be viewed or edited.
      """
      queryset = Route.objects.all()
      serializer_class = StopSerializer
+
 
 @api_view(['GET', 'POST'])
 def cordinate_list(request):
@@ -186,6 +198,7 @@ def cordinate_list(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def bus_detail(request, pk):
@@ -212,6 +225,7 @@ def bus_detail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
 @api_view(['GET', 'PUT', 'DELETE'])
 def search_bus(request, license):
     """
@@ -237,6 +251,7 @@ def search_bus(request, license):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
 @api_view(['GET'])
 def get_currentBusLocations(request, route):
     """
@@ -245,14 +260,16 @@ def get_currentBusLocations(request, route):
     try:
         today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
         today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
-        snippet = coordinate.objects.order_by("-bus_id","-date_added").filter(route_id= route,date_added__range=(today_min, today_max)).distinct('bus_id')
+        snippet = coordinate.objects.order_by("-bus_id","-date_added").filter(route_id= route,date_added__range=(today_min, today_max), date_added__gte=dtdatetime.now()-timedelta(minutes=10)).distinct('bus_id')
     #     .distinct('bus_id')
+    # , date_added__lte=today_max-timedelta(min(5)
     except coordinate.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
         serializer = LocationSerializer(snippet, many=True)
         return Response(serializer.data)
+
 
 @api_view(['GET'])
 def get_stopsOnRoute(request, route):
@@ -267,3 +284,4 @@ def get_stopsOnRoute(request, route):
     if request.method == 'GET':
         serializer = RouteStopSerializer(snippet, many=True)
         return Response(serializer.data)
+
