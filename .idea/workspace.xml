@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracking/settings-paused/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracking/settings-paused/common.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracking/settings-paused/dev.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tracking/settings-paused/prod.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.61290324" vertical-offset="2230" max-vertical-offset="2910">
+            <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0" vertical-offset="2230" max-vertical-offset="2910">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="13" selection-start="649" selection-end="649" vertical-scroll-proportion="0.7741935" vertical-offset="0" max-vertical-offset="620">
               <folding />
             </state>
           </provider>
@@ -104,6 +110,7 @@
         <option value="$PROJECT_DIR$/tracking/settings/common.py" />
         <option value="$PROJECT_DIR$/tracking/wsgi.py" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -1012,7 +1019,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.61290324" vertical-offset="2230" max-vertical-offset="2910">
+        <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0" vertical-offset="2230" max-vertical-offset="2910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="649" selection-end="649" vertical-scroll-proportion="0.7741935" vertical-offset="0" max-vertical-offset="620">
           <folding />
         </state>
       </provider>
