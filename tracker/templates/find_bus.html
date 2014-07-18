@@ -123,53 +123,43 @@
                                                 return cookieValue;
                                             }
 
+                                            //Time between marker refreshes
+                                            var INTERVAL = 60*1000;
 
+                                             function getMarkers() {
+                                              $.get('/getbuslocations/'+Rid, {}, function(res,resp) {
+                                                  var j=0;
+                                                        for(var i=0, len=res.length; i<len; i++) {
+{#                                                            alert("moving "+i);#}
 
-                                               $.ajax
-                                                ({
-                                                type: "GET",
-                                                url: "/getbuslocations/"+Rid,
-                                                data: {'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
-                                                contentType: 'application/json',
-                                                cache: false,
-                                                success: function(html)
-                                                {
-{#                                                    alert("Response "+JSON.stringify(html));#}
-                                                    var arr = html;
+                                                        var marker = new google.maps.Marker({
+                                                                position: new google.maps.LatLng(res[i].latitude,res[i].longitude),
+                                                                icon: '/static/img/travel_bus.png',
+                                                                map:map,
+                                                                title:"Bus location"
+                                                            });
 
-                                                    i;
-                                                    for (i = 0; i < arr.length; ++i) {
-                                                        console.log("Array is of size :"+arr.length);
-                                                        console.log(arr[i].bus_id +" at "+arr[i].latitude);
-                                                        var point = new google.maps.LatLng(arr[i].latitude,arr[i].longitude);
-                                                    var marker = new google.maps.Marker({
-                                                    position: point,
-                                                    icon: '/static/img/travel_bus.png',
-                                                    map: map,
-                                                    title: arr[i].bus_id
-                                                    });
-                                                    var busId = (arr[i].bus_id).substring(6).replace('/', '').replace('/', '').trim();
-                                                    marker['infowindow']  = new google.maps.InfoWindow({
-                                                    content: "<h3 id='bus_license'> Bus "+(i+1)+"</h3>"+
-                                                          "<p><a href='/popup?busId="+busId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+arr[i].latitude+"&buslong="+arr[i].longitude+"&speed="+arr[i].speed+"' class='popup2'>Estimate Time</a></p>"
-                                                         ,
-                                                    maxWidth:230
-                                                    });
-                                                    google.maps.event.addListener(marker, 'click', function() {
-                                                    this['infowindow'].open(map, this);
-                                                    });
-                                                    google.maps.event.addListener(marker, 'mouseover', function() {
-                                                    this['infowindow'].open(map, this);
-                                                    });
-                                                        } //end forloop
-                                                $(".busdata").html(JSON.stringify(html));
-                                                $("#check").html(' ');
-                                                },
-                                                    error: function(xhr, textStatus, thrownError){
-{#                                                        alert("xhr status: " + xhr.statusText);#}
-                                                    }
-                                                });
-{#                                             return false;#}
+                                                        var busId = (res[i].bus_id).substring(6).replace('/', '').replace('/', '').trim();
+                                                        marker['infowindow']  = new google.maps.InfoWindow({
+                                                        content: "<h3 id='bus_license'> Bus "+(j+1)+"</h3>"+
+                                                              "<p><a href='/popup?busId="+busId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+res[i].latitude+"&buslong="+res[i].longitude+"&speed="+res[i].speed+"' class='popup2'>Estimate Time</a></p>"
+                                                             ,
+                                                        maxWidth:230
+                                                        });
+
+                                                        google.maps.event.addListener(marker, 'click', function() {
+                                                        this['infowindow'].open(map, this);
+                                                        });
+                                                        google.maps.event.addListener(marker, 'mouseover', function() {
+                                                        this['infowindow'].open(map, this);
+                                                        });
+
+                                                        }
+                                                        window.setTimeout(getMarkers,INTERVAL);
+                                                        $("#check").html(' ');
+                                                    }, "json");
+                                                }
+                                            window.setTimeout(getMarkers(), INTERVAL);
 
                                             //Load route stops basing on a given route
                                                $.ajax

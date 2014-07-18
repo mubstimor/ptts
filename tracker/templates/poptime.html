@@ -21,6 +21,10 @@
                                 var buslong = getURLParameter('buslong').trim();
                                 var speed = getURLParameter('speed').trim();
 {#                                alert(userlat);#}
+                                var address;
+                                if(userlat == "null" || userlong == "null"){
+                                  address = prompt("Please enter your current location", "current area,kampala");
+                                    }
 
 
                                      function getCookie(name) {
@@ -68,8 +72,14 @@
                                 var geocoder;
                                 var bounds = new google.maps.LatLngBounds();
                                 var markersArray = [];
+                                var origin1;
 
-                                var origin1 = new google.maps.LatLng(userlat, userlong);
+                                  if(userlat == "null" || userlong == "null"){
+                                    origin1 = address;
+                                   }else{
+                                    origin1 = new google.maps.LatLng(userlat, userlong);
+                                  }
+
                                 var destinationB = new google.maps.LatLng(buslat, buslong);
 {#                                var origin1 = new google.maps.LatLng(0.331612, 32.573512);#}
 {#                                var destinationB = new google.maps.LatLng(0.355471, 32.613321);#}
@@ -181,7 +191,7 @@
                                 <p>License Number : <span id="plate"></span> <br/>Travelling at <script>document.write(speed)</script> km/hr</p>
 
                             </pre>
-                            <p><button type="button" onclick="calculateDistances();">Calculate distances</button><br/></p>
+                            <p><button type="button" onclick="calculateDistances();">Calculate Time</button><br/></p>
                             <div id="outputDiv"></div>
 
                         </div>
