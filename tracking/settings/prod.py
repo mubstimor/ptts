@@ -2,7 +2,7 @@
 
 
 from os import environ
-
+from S3 import CallingFormat
 from common import *
 
 ########## EMAIL CONFIGURATION
@@ -40,45 +40,37 @@ DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 ########## END DATABASE CONFIGURATION
 
 
-########## CELERY CONFIGURATION
-# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-transport
-BROKER_TRANSPORT = 'amqplib'
-
-# Set this number to the amount of allowed concurrent connections on your AMQP
-# provider, divided by the amount of active workers you have.
-#
-# For example, if you have the 'Little Lemur' CloudAMQP plan (their free tier),
-# they allow 3 concurrent connections. So if you run a single worker, you'd
-# want this number to be 3. If you had 3 workers running, you'd lower this
-# number to 1, since 3 workers each maintaining one open connection = 3
-# connections total.
-#
-# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-pool-limit
-BROKER_POOL_LIMIT = 3
-
-# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-connection-max-retries
-BROKER_CONNECTION_MAX_RETRIES = 0
-
-# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-url
-BROKER_URL = environ.get('RABBITMQ_URL') or environ.get('CLOUDAMQP_URL')
-
-# See: http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
-CELERY_RESULT_BACKEND = 'amqp'
-########## END CELERY CONFIGURATION
-
 ########## ALLOWED HOSTS CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['.herokuapp.com']
 ########## END ALLOWED HOST CONFIGURATION
 
-########## STATIC FILE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = 'staticfiles'
+########## STORAGE CONFIGURATION
+# See: http://django-storages.readthedocs.org/en/latest/index.html
+INSTALLED_APPS += (
+    'storages',
+)
+
+# See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
+STATICFILES_STORAGE = DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+# See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
+AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
+
+# See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', 'AKIAJWCDCNAJ4HUTXIHA')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', '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')
+AWS_STORAGE_BUCKET_NAME = environ.get('AWS_STORAGE_BUCKET_NAME', 'ptts')
+AWS_AUTO_CREATE_BUCKET = True
+AWS_QUERYSTRING_AUTH = False
+
+# AWS cache settings, don't change unless you know what you're doing:
+AWS_EXPIRY = 60 * 60 * 24 * 7
+AWS_HEADERS = {
+    'Cache-Control': 'max-age=%d, s-maxage=%d, must-revalidate' % (AWS_EXPIRY,
+        AWS_EXPIRY)
+}
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = '/static/'
-
-# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+########## END STORAGE CONFIGURATION
