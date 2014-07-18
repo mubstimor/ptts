@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/serializers.py" afterPath="$PROJECT_DIR$/tracker/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="0" selection-start="4208" selection-end="4208" vertical-scroll-proportion="0.24271844" vertical-offset="2130" max-vertical-offset="2910">
+            <state line="154" column="0" selection-start="4209" selection-end="4210" vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="2910">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="228" column="30" selection-start="13435" selection-end="13435" vertical-scroll-proportion="0.9483649" vertical-offset="2869" max-vertical-offset="3660">
               <folding />
             </state>
           </provider>
@@ -114,12 +120,12 @@
         <option value="$PROJECT_DIR$/tracking/settings/local.py" />
         <option value="$PROJECT_DIR$/tracker/templates/poptime.html" />
         <option value="$PROJECT_DIR$/tracker/templates/base.html" />
-        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
         <option value="$PROJECT_DIR$/tracker/serializers.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
+        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
       </list>
     </option>
   </component>
@@ -1036,11 +1042,6 @@
         <state line="2" column="0" selection-start="17" selection-end="50" vertical-scroll-proportion="0.053097345" vertical-offset="0" max-vertical-offset="565" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="83" selection-start="11857" selection-end="11857" vertical-scroll-proportion="0.44122967" vertical-offset="2576" max-vertical-offset="3660" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="37" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="4065" />
@@ -1083,7 +1084,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="4208" selection-end="4208" vertical-scroll-proportion="0.24271844" vertical-offset="2130" max-vertical-offset="2910">
+        <state line="154" column="0" selection-start="4209" selection-end="4210" vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="2910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="30" selection-start="13435" selection-end="13435" vertical-scroll-proportion="0.9483649" vertical-offset="2869" max-vertical-offset="3660">
           <folding />
         </state>
       </provider>
