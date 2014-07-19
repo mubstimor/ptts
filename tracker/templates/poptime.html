@@ -107,11 +107,11 @@
 {#                                        window.open(url);#}
 
                                      $.get(url, {}, function(res,resp) {
-                                         alert("function run");
+                                         //alert("function run");
                                           var j=1;
-                                                for(var i=0, len=res.length; i<len; i++) {
-                                                    alert("moving "+res[i].formatted_address);
-                                                }
+                                              //  for(var i=0, len=res.length; i<len; i++) {
+                                                    alert("u are at "+res[1].formatted_address);
+                                                //}
 
                                             }, "json");
                                         }
