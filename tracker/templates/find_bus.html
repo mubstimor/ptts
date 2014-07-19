@@ -140,9 +140,11 @@
                                                             });
 
                                                         var busId = (res[i].bus_id).substring(6).replace('/', '').replace('/', '').trim();
+                                                        var routeId = (res[i].route_id).substring(7).replace('/', '').replace('/', '').trim();
+
                                                         marker['infowindow']  = new google.maps.InfoWindow({
                                                         content: "<h3 id='bus_license'> Bus "+j+"</h3>"+
-                                                              "<p><a href='/popup?busId="+busId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+res[i].latitude+"&buslong="+res[i].longitude+"&speed="+res[i].speed+"' class='popup2'>Estimate Time</a></p>"
+                                                              "<p><a href='/popup?busId="+busId+"&routeId="+routeId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+res[i].latitude+"&buslong="+res[i].longitude+"&speed="+res[i].speed+"' class='popup2'>Estimate Time</a></p>"
                                                              ,
                                                         maxWidth:230
                                                         });
