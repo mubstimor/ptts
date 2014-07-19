@@ -110,8 +110,14 @@
                                          alert("function run");
                                          // var j=1;
                                               //  for(var i=0, len=res.length; i<len; i++) {
-                                                    alert("u are at "+res[0].address_components[1].short_name);
+                                                   // alert("u are at "+res[0].address_components[1].short_name);
                                                 //}
+                                         var loc;
+                                         for(var i in results[0].address_components){
+                                                console.log(results[0].address_components[i].short_name);
+                                             loc += results[0].address_components[i].short_name+" ";
+                                            }
+                                         alert(loc);
 
                                             }, "json");
                                         }
