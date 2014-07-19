@@ -104,6 +104,7 @@
                                       var latlng = new google.maps.LatLng(lat, lng);
                                       var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+userlat+','+userlong+'&sensor=true';
                                         alert(url);
+                                        console.log(url);
 
                                      $.get(url, {}, function(res,resp) {
                                           var j=1;
