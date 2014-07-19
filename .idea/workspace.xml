@@ -67,7 +67,7 @@
       <file leaf-file-name="poptime.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="68" selection-start="6702" selection-end="6702" vertical-scroll-proportion="0.46471602" vertical-offset="1410" max-vertical-offset="3525">
+            <state line="112" column="84" selection-start="6718" selection-end="6718" vertical-scroll-proportion="0.46471602" vertical-offset="1410" max-vertical-offset="3525">
               <folding />
             </state>
           </provider>
@@ -1076,7 +1076,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="68" selection-start="6702" selection-end="6702" vertical-scroll-proportion="0.46471602" vertical-offset="1410" max-vertical-offset="3525">
+        <state line="112" column="84" selection-start="6718" selection-end="6718" vertical-scroll-proportion="0.46471602" vertical-offset="1410" max-vertical-offset="3525">
           <folding />
         </state>
       </provider>
