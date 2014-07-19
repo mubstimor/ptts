@@ -128,7 +128,7 @@
 
                                              function getMarkers() {
                                               $.get('/getbuslocations/'+Rid, {}, function(res,resp) {
-                                                  var j=0;
+                                                  var j=1;
                                                         for(var i=0, len=res.length; i<len; i++) {
 {#                                                            alert("moving "+i);#}
 
@@ -141,7 +141,7 @@
 
                                                         var busId = (res[i].bus_id).substring(6).replace('/', '').replace('/', '').trim();
                                                         marker['infowindow']  = new google.maps.InfoWindow({
-                                                        content: "<h3 id='bus_license'> Bus "+(j+1)+"</h3>"+
+                                                        content: "<h3 id='bus_license'> Bus "+j+"</h3>"+
                                                               "<p><a href='/popup?busId="+busId+"&userlat="+userLat+"&userlong="+userLong+"&buslat="+res[i].latitude+"&buslong="+res[i].longitude+"&speed="+res[i].speed+"' class='popup2'>Estimate Time</a></p>"
                                                              ,
                                                         maxWidth:230
@@ -153,6 +153,8 @@
                                                         google.maps.event.addListener(marker, 'mouseover', function() {
                                                         this['infowindow'].open(map, this);
                                                         });
+
+                                                            j++;
 
                                                         }
                                                         window.setTimeout(getMarkers,INTERVAL);

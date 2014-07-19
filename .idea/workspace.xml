@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/static/img/person.png" afterPath="$PROJECT_DIR$/tracker/static/img/person.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/static/img/travel_bus.png" afterPath="$PROJECT_DIR$/tracker/static/img/travel_bus.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/poptime.html" afterPath="$PROJECT_DIR$/tracker/templates/poptime.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="1" selection-start="4920" selection-end="4920" vertical-scroll-proportion="0.92718446" vertical-offset="2037" max-vertical-offset="2910">
+            <state line="147" column="18" selection-start="4030" selection-end="4030" vertical-scroll-proportion="0.0" vertical-offset="2037" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
@@ -78,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="45" selection-start="7230" selection-end="9843" vertical-scroll-proportion="-3.125" vertical-offset="1845" max-vertical-offset="3510">
+            <state line="156" column="64" selection-start="9557" selection-end="9557" vertical-scroll-proportion="0.8519794" vertical-offset="1845" max-vertical-offset="3540">
               <folding />
             </state>
           </provider>
@@ -130,10 +125,10 @@
         <option value="$PROJECT_DIR$/tracking/settings/common.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/tracking/wsgi.py" />
-        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
         <option value="$PROJECT_DIR$/tracker/templates/poptime.html" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
+        <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
       </list>
     </option>
   </component>
@@ -1051,13 +1046,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="45" selection-start="7230" selection-end="9843" vertical-scroll-proportion="-3.125" vertical-offset="1845" max-vertical-offset="3510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
@@ -1081,7 +1069,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="1" selection-start="4920" selection-end="4920" vertical-scroll-proportion="0.92718446" vertical-offset="2037" max-vertical-offset="2910">
+        <state line="147" column="18" selection-start="4030" selection-end="4030" vertical-scroll-proportion="0.0" vertical-offset="2037" max-vertical-offset="2910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="64" selection-start="9557" selection-end="9557" vertical-scroll-proportion="0.8519794" vertical-offset="1845" max-vertical-offset="3540">
           <folding />
         </state>
       </provider>
