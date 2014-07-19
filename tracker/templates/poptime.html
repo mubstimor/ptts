@@ -220,8 +220,33 @@
                             </pre>
                             <p><button type="button" onclick="calculateDistances();">Calculate Time</button><br/></p>
                             <div id="outputDiv"></div>
-{#                            codeLatLng(0.34474,32.45526);#}
 
+
+                        </div>
+
+                          <div class="span3">
+                  <div class="page-header">
+                    <h2 class="title"><span>Route Stops</span></h2>
+                  </div>
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Stop name</th>
+                        <th>Estimated Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for route_stop in route_stops %}
+                      <tr>
+                        <td>{{ route_stop.id }}</td>
+                        <td>{{ route_stop.stop_name }}</td>
+                      <td>5mins</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
                         </div>
 
                     </div>

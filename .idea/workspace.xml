@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/poptime.html" afterPath="$PROJECT_DIR$/tracker/templates/poptime.html" />
     </list>
     <ignored path="tracking.iws" />
@@ -65,19 +64,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poptime.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+      <file leaf-file-name="routes.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/routes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="63" selection-start="9785" selection-end="9785" vertical-scroll-proportion="-18.75" vertical-offset="1980" max-vertical-offset="3600">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="route_stops.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="18" selection-start="525" selection-end="1320" vertical-scroll-proportion="-3.0833333" vertical-offset="196" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poptime.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="259" column="0" selection-start="13782" selection-end="13782" vertical-scroll-proportion="0.9460432" vertical-offset="3359" max-vertical-offset="3975">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="115" selection-start="8760" selection-end="8760" vertical-scroll-proportion="0.7194492" vertical-offset="1772" max-vertical-offset="3570">
+            <state line="132" column="83" selection-start="7597" selection-end="7597" vertical-scroll-proportion="-8.666667" vertical-offset="1772" max-vertical-offset="3570">
               <folding />
             </state>
           </provider>
@@ -128,8 +147,8 @@
         <option value="$PROJECT_DIR$/tracking/wsgi.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
-        <option value="$PROJECT_DIR$/tracker/templates/poptime.html" />
         <option value="$PROJECT_DIR$/tracker/templates/find_bus.html" />
+        <option value="$PROJECT_DIR$/tracker/templates/poptime.html" />
       </list>
     </option>
   </component>
@@ -632,16 +651,6 @@
         <state line="8" column="30" selection-start="291" selection-end="298" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="900" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/routes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
     <entry file="uml://Python/#/home/timoh/Documents/tracking/tracker/models.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1047,13 +1056,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="282" column="0" selection-start="9211" selection-end="9211" vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="4095">
@@ -1068,17 +1070,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="63" selection-start="9785" selection-end="9785" vertical-scroll-proportion="-18.75" vertical-offset="1980" max-vertical-offset="3600">
+        <state line="132" column="83" selection-start="7597" selection-end="7597" vertical-scroll-proportion="-8.666667" vertical-offset="1772" max-vertical-offset="3570">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="115" selection-start="8760" selection-end="8760" vertical-scroll-proportion="0.7194492" vertical-offset="1772" max-vertical-offset="3570">
+        <state line="1" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/routes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="18" selection-start="525" selection-end="1320" vertical-scroll-proportion="-3.0833333" vertical-offset="196" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="259" column="0" selection-start="13782" selection-end="13782" vertical-scroll-proportion="0.9460432" vertical-offset="3359" max-vertical-offset="3975">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
