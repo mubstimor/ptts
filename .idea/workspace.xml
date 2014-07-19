@@ -67,7 +67,7 @@
       <file leaf-file-name="poptime.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="50" selection-start="6470" selection-end="6470" vertical-scroll-proportion="0.38726333" vertical-offset="1410" max-vertical-offset="3510">
+            <state line="115" column="55" selection-start="6831" selection-end="6831" vertical-scroll-proportion="0.5421687" vertical-offset="1410" max-vertical-offset="3525">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="find_bus.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="46" selection-start="7300" selection-end="9855" vertical-scroll-proportion="17.625" vertical-offset="2358" max-vertical-offset="3540">
+            <state line="134" column="93" selection-start="7692" selection-end="7692" vertical-scroll-proportion="-6.3333335" vertical-offset="1858" max-vertical-offset="3540">
               <folding />
             </state>
           </provider>
@@ -1069,14 +1069,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="46" selection-start="7300" selection-end="9855" vertical-scroll-proportion="17.625" vertical-offset="2358" max-vertical-offset="3540">
+        <state line="134" column="93" selection-start="7692" selection-end="7692" vertical-scroll-proportion="-6.3333335" vertical-offset="1858" max-vertical-offset="3540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/poptime.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="50" selection-start="6470" selection-end="6470" vertical-scroll-proportion="0.38726333" vertical-offset="1410" max-vertical-offset="3510">
+        <state line="115" column="55" selection-start="6831" selection-end="6831" vertical-scroll-proportion="0.5421687" vertical-offset="1410" max-vertical-offset="3525">
           <folding />
         </state>
       </provider>
