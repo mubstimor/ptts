@@ -105,7 +105,7 @@
       <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="55" selection-start="7240" selection-end="7240" vertical-scroll-proportion="0.18884893" vertical-offset="1815" max-vertical-offset="3660">
+            <state line="130" column="0" selection-start="7330" selection-end="7330" vertical-scroll-proportion="0.24280575" vertical-offset="1815" max-vertical-offset="3660">
               <folding />
             </state>
           </provider>
@@ -1125,7 +1125,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="55" selection-start="7240" selection-end="7240" vertical-scroll-proportion="0.18884893" vertical-offset="1815" max-vertical-offset="3660">
+        <state line="130" column="0" selection-start="7330" selection-end="7330" vertical-scroll-proportion="0.24280575" vertical-offset="1815" max-vertical-offset="3660">
           <folding />
         </state>
       </provider>
