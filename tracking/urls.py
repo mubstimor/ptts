@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     url(r'^demo', 'tracker.views.demo', name='demo'),
     url(r'^benefits', 'tracker.views.benefits', name='benefits'),
     url(r'^gps', 'tracker.views.gps', name='gps'),
-    url(r'^popup', 'tracker.views.time', name='time'),
+    url(r'^popup', 'tracker.views.route_stops_data', name='time'),
     # url(r'^find_bus', 'tracker.views.find_bus_location', name='find_bus'),
 
     #provides for markers

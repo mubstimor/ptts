@@ -15,6 +15,7 @@
                                     }
 
                                 var busId = getURLParameter('busId').trim();
+                                var Rid = getURLParameter('routeId').trim();
                                 var userlat = getURLParameter('userlat').trim();
                                 var userlong = getURLParameter('userlong').trim();
                                 var buslat = getURLParameter('buslat').trim();
@@ -66,7 +67,6 @@
                                                 alert("xhr status: " + xhr.statusText);
                                             }
                                         });
-
 
                                 var map;
                                 var geocoder;
@@ -122,7 +122,7 @@
 {#                                            }, "json");#}
 {#                                        }#}
 {#                                    codeLatLng();#}
-
+// calculateDistance(StopLat, StopLng)
 
                                 function calculateDistances() {
                                   var service = new google.maps.DistanceMatrixService();
@@ -135,6 +135,26 @@
                                       avoidHighways: false,
                                       avoidTolls: false
                                     }, callback);
+                                }
+
+                                function get_StopDistance(lat,lng) {
+
+                                    alert("stop of "+lat+" , "+lng+" and bus of "+buslat+", "+buslong);
+
+                                    var busLocation;
+                                    var stopLocation;
+                                  var service = new google.maps.DistanceMatrixService();
+                                    stopLocation = new google.maps.LatLng(lat, lng);
+                                    busLocation = new google.maps.LatLng(buslat, buslong);
+                                  service.getDistanceMatrix(
+                                    {
+                                      origins: [stopLocation],
+                                      destinations: [busLocation],
+                                      travelMode: google.maps.TravelMode.DRIVING,
+                                      unitSystem: google.maps.UnitSystem.METRIC,
+                                      avoidHighways: false,
+                                      avoidTolls: false
+                                    }, callback2);
                                 }
 
                                 function callback(response, status) {
@@ -169,6 +189,53 @@
                                   }
                                 }
 
+                                  function callback2(response, status) {
+
+                                  if (status != google.maps.DistanceMatrixStatus.OK) {
+                                    alert('Error was: ' + status);
+                                  } else {
+
+                                    var origins = response.originAddresses;
+
+                                    var destinations = response.destinationAddresses;
+
+                                    var outputDiv = document.getElementById('outputDiv');
+
+
+{#                                    outputDiv.innerHTML = 'Maurice';#}
+                                    deleteOverlays();
+                                    var k=0;
+
+                                    for (var i = 0; i < origins.length; i++) {
+                                      var results = response.rows[i].elements;
+                                      addMarker(origins[i], false);
+
+                                      for (var j = 0; j < results.length; j++) {
+
+                                         var googleTime = results[j].duration.text.substring(0,2).trim();
+                                         var distance = results[j].distance.text.substring(0,4).trim();
+
+                                          var pttsTime = (distance/speed) * 60;
+                                          var roundedOffTime = Math.round(pttsTime * 100) / 100;
+                                          var ceilTime = Math.ceil(roundedOffTime);
+
+                                            addMarker(destinations[j], true);
+                                          outputDiv.innerHTML = origins[i] + ' to ' + destinations[j]
+                                            + ': ' + results[j].distance.text + ' in '
+                                            + ceilTime + ' minutes <br>';
+
+{#                                          alert("ceil "+ceilTime);#}
+{#                                          document.getElementById("row").innerHTML = ceilTime;#}
+                                          k++;
+                                          //outputDiv.innerHTML += "New text!";
+                                          //innerHTML +=  ceilTime + ' minutes';
+                                          //return ceilTime +" minutes";
+
+                                      }
+                                    }
+                                  }
+                                }
+
                                 function addMarker(location, isDestination) {
                                   var icon;
                                   if (isDestination) {
@@ -193,6 +260,33 @@
                                   });
                                 }
 
+                                function routestops(){
+                                //Load route stops basing on a given route
+                                   $.ajax
+                                    ({
+                                    type: "GET",
+                                    url: "/getroutestops/"+Rid,
+                                    data: {'format':'json',csrfmiddlewaretoken: getCookie('csrftoken')},
+                                    contentType: 'application/json',
+                                    cache: false,
+                                    success: function(html)
+                                    {
+                                        var arr = html;
+                                        var stops = '';
+                                        i;
+                                        for (i = 0; i < arr.length; ++i) {
+                                            console.log(arr[i].stop_name);
+                                            stops += "<tr><td>"+i+"</td><td>"+arr[i].stop_name+"</td><td><button type='button' onclick='get_StopDistance("+arr[i].latitude+","+ arr[i].longitude+");'>Calculate</button></td></tr>";
+                                            } //end forloop
+                                        $("#printHere").html(stops)
+
+                                    },
+                                        error: function(xhr, textStatus, thrownError){
+    {#                                                        alert("xhr status: " + xhr.statusText);#}
+                                        }
+                                    });
+                                } //end func
+
                                 function deleteOverlays() {
                                   for (var i = 0; i < markersArray.length; i++) {
                                     markersArray[i].setMap(null);
@@ -207,6 +301,18 @@
                                 });
 
                             </script>
+
+                            <script type="text/javascript">
+                                if (window.addEventListener) { // Mozilla, Netscape, Firefox
+                                    window.addEventListener('load', routestops, false);
+                                } else if (window.attachEvent) { // IE
+                                    window.attachEvent('onload', routestops);
+                                }
+
+                                function WindowLoad(event) {
+                                    alert("Another onload script");
+                                }
+                                </script>
 
                              <div id="map-canvas" style="width: 100%; height: 500px"> </div>
 
@@ -228,30 +334,30 @@
                   <div class="page-header">
                     <h2 class="title"><span>Route Stops</span></h2>
                   </div>
+
+
                   <table class="table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th>#</th>
                         <th>Stop name</th>
-                        <th>Estimated Time</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="printHere">
 
-                    {% for route_stop in route_stops %}
-                      <tr>
-                        <td>{{ route_stop.id }}</td>
-                        <td>{{ route_stop.stop_name }}</td>
-                      <td>5mins</td>
-                      </tr>
-                    {% endfor %}
+{#                    {% for route_stop in route_stops %}#}
+{#                      <tr>#}
+{#                        <td>{{ route_stop.id }}</td>#}
+{#                        <td>{{ route_stop.stop_name }}</td>#}
+{#                      <td>5mins</td>#}
+{#                      </tr>#}
+{#                    {% endfor %}#}
                     </tbody>
                   </table>
                         </div>
 
                     </div>
-
-
                 </section>
 
             </div>

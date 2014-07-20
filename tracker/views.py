@@ -110,6 +110,11 @@ def route_stops(request, route_id=1):
 	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(id = route_id)})
 
 
+def route_stops_data(request):
+    route = request.GET.get('routeId','')
+    return render_to_response('poptime.html', {'route_stops': Stop.objects.filter(id = route)})
+
+
 def find_bus(request):
     route = Route.objects.all()
     variables = RequestContext(request,{"routes":route})
