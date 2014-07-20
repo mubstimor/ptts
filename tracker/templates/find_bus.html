@@ -127,7 +127,7 @@
                                             var INTERVAL = 60*1000;
 
                                              function getMarkers() {
-                                                 
+
                                               $.get('/getbuslocations/'+Rid, {}, function(res,resp) {
                                                   var j=1;
                                                         for(var i=0, len=res.length; i<len; i++) {
@@ -155,6 +155,10 @@
                                                         });
                                                         google.maps.event.addListener(marker, 'mouseover', function() {
                                                         this['infowindow'].open(map, this);
+                                                        });
+
+                                                        google.maps.event.addListener(marker, "dblclick", function() {
+                                                            marker.setMap(null);
                                                         });
 
                                                             j++;
