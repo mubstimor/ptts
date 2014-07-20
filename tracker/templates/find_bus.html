@@ -127,7 +127,7 @@
                                             var INTERVAL = 60*1000;
 
                                              function getMarkers() {
-                                              map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                                                 
                                               $.get('/getbuslocations/'+Rid, {}, function(res,resp) {
                                                   var j=1;
                                                         for(var i=0, len=res.length; i<len; i++) {
