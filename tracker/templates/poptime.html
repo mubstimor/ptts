@@ -139,7 +139,7 @@
 
                                 function get_StopDistance(lat,lng) {
 
-                                    alert("stop of "+lat+" , "+lng+" and bus of "+buslat+", "+buslong);
+{#                                    alert("stop of "+lat+" , "+lng+" and bus of "+buslat+", "+buslong);#}
 
                                     var busLocation;
                                     var stopLocation;
@@ -273,10 +273,12 @@
                                     {
                                         var arr = html;
                                         var stops = '';
+                                        k=1;
                                         i;
                                         for (i = 0; i < arr.length; ++i) {
                                             console.log(arr[i].stop_name);
-                                            stops += "<tr><td>"+i+"</td><td>"+arr[i].stop_name+"</td><td><button type='button' onclick='get_StopDistance("+arr[i].latitude+","+ arr[i].longitude+");'>Calculate</button></td></tr>";
+                                            stops += "<tr><td>"+k+"</td><td>"+arr[i].stop_name+"</td><td><button type='button' onclick='get_StopDistance("+arr[i].latitude+","+ arr[i].longitude+");'>Calculate</button></td></tr>";
+                                            k++;
                                             } //end forloop
                                         $("#printHere").html(stops)
 
