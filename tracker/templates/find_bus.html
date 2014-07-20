@@ -127,6 +127,7 @@
                                             var INTERVAL = 60*1000;
 
                                              function getMarkers() {
+                                                 map.clearAllMarkers();
 
                                               $.get('/getbuslocations/'+Rid, {}, function(res,resp) {
                                                   var j=1;

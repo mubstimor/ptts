@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/find_bus.html" afterPath="$PROJECT_DIR$/tracker/templates/find_bus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +105,7 @@
       <file leaf-file-name="find_bus.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="3" selection-start="9661" selection-end="9661" vertical-scroll-proportion="0.78417265" vertical-offset="1949" max-vertical-offset="3645">
+            <state line="128" column="55" selection-start="7240" selection-end="7240" vertical-scroll-proportion="0.18884893" vertical-offset="1815" max-vertical-offset="3660">
               <folding />
             </state>
           </provider>
@@ -1126,7 +1125,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="3" selection-start="9661" selection-end="9661" vertical-scroll-proportion="0.78417265" vertical-offset="1949" max-vertical-offset="3645">
+        <state line="128" column="55" selection-start="7240" selection-end="7240" vertical-scroll-proportion="0.18884893" vertical-offset="1815" max-vertical-offset="3660">
           <folding />
         </state>
       </provider>
