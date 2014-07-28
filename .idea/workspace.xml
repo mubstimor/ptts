@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/settings.py" afterPath="$PROJECT_DIR$/tracking/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +31,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="0" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.23755656" vertical-offset="2145" max-vertical-offset="2910">
+            <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.84841627" vertical-offset="2235" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
@@ -1101,7 +1099,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.23755656" vertical-offset="2145" max-vertical-offset="2910">
+        <state line="175" column="0" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.84841627" vertical-offset="2235" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>
