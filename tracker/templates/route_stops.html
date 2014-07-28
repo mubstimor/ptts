@@ -31,7 +31,7 @@
 
                     {% for route_stop in route_stops %}
                       <tr>
-                        <td>{{ route_stop.id }}</td>
+                        <td>{{forloop.counter}}</td>
                         <td>{{ route_stop.stop_name }}</td>
                       </tr>
                     {% endfor %}

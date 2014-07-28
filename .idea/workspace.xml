@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7c415c-0ac1-4f42-a1ea-7397c0591be4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/serializers.py" afterPath="$PROJECT_DIR$/tracker/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracking/urls.py" afterPath="$PROJECT_DIR$/tracking/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/views.py" afterPath="$PROJECT_DIR$/tracker/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tracker/templates/route_stops.html" afterPath="$PROJECT_DIR$/tracker/templates/route_stops.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracking.iws" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tracking/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="0" selection-start="5013" selection-end="5013" vertical-scroll-proportion="0.62057334" vertical-offset="2317" max-vertical-offset="2910">
+            <state line="173" column="35" selection-start="4856" selection-end="4856" vertical-scroll-proportion="0.44350758" vertical-offset="2317" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
@@ -53,7 +50,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="260" column="0" selection-start="8329" selection-end="8329" vertical-scroll-proportion="0.0" vertical-offset="3245" max-vertical-offset="4395">
+            <state line="260" column="0" selection-start="8329" selection-end="8329" vertical-scroll-proportion="0.0" vertical-offset="1012" max-vertical-offset="4395">
               <folding />
             </state>
           </provider>
@@ -98,7 +95,7 @@
       <file leaf-file-name="route_stops.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="24" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="765">
+            <state line="30" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="-10.583333" vertical-offset="196" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -168,6 +165,7 @@
         <option value="$PROJECT_DIR$/tracker/serializers.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracking/urls.py" />
+        <option value="$PROJECT_DIR$/tracker/templates/route_stops.html" />
         <option value="$PROJECT_DIR$/tracking/settings.py" />
       </list>
     </option>
@@ -1058,13 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/templates/find_bus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="92" selection-start="7584" selection-end="7584" vertical-scroll-proportion="0.0" vertical-offset="1919" max-vertical-offset="3660">
@@ -1075,13 +1066,6 @@
     <entry file="file://$PROJECT_DIR$/tracker/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="68" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="0" selection-start="8329" selection-end="8329" vertical-scroll-proportion="0.0" vertical-offset="3245" max-vertical-offset="4395">
           <folding />
         </state>
       </provider>
@@ -1100,9 +1084,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="260" column="0" selection-start="8329" selection-end="8329" vertical-scroll-proportion="0.0" vertical-offset="1012" max-vertical-offset="4395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/templates/route_stops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="-10.583333" vertical-offset="196" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tracking/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="0" selection-start="5013" selection-end="5013" vertical-scroll-proportion="0.62057334" vertical-offset="2317" max-vertical-offset="2910">
+        <state line="173" column="35" selection-start="4856" selection-end="4856" vertical-scroll-proportion="0.44350758" vertical-offset="2317" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>
