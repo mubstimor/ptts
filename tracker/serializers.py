@@ -23,7 +23,7 @@ class RouteSerializer(serializers.ModelSerializer):
 class RouteStopSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stop
-        fields = ('id', 'stop_name', 'latitude','longitude')
+        fields = ('id', 'stop_name', 'latitude','longitude', 'route')
 
 
 class BusSerializer(serializers.ModelSerializer):

@@ -107,7 +107,7 @@ def routes(request):
 
 
 def route_stops(request, route_id=1):
-	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(id = route_id)})
+	return render_to_response('route_stops.html', {'route_stops': Stop.objects.filter(route = route_id)})
 
 
 def route_stops_data(request):
@@ -255,6 +255,21 @@ def search_bus(request, license):
     elif request.method == 'DELETE':
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET'])
+def search_stop(request, stop):
+    """
+    Retrieve a snippet instance.
+    """
+    try:
+        snippet = Stop.objects.filter(stop_name = stop)
+    except Stop.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = RouteStopSerializer(snippet, many=True)
+        return Response(serializer.data)
 
 
 @api_view(['GET'])
