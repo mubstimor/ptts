@@ -263,7 +263,7 @@ def search_stop(request, stop):
     Retrieve a snippet instance.
     """
     try:
-        snippet = Stop.objects.filter(stop_name = stop)
+        snippet = Stop.objects.filter(stop_name__contains = stop)
     except Stop.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
