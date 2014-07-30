@@ -143,14 +143,14 @@ WSGI_APPLICATION = 'tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
 REST_FRAMEWORK = {
@@ -172,13 +172,13 @@ REST_FRAMEWORK = {
 #GMAIL SETTINGSsyv
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mubstimor@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['DJANGO_EMAIL_PASSWORD']
+# EMAIL_HOST_PASSWORD = os.environ['DJANGO_EMAIL_PASSWORD']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL='info@tracker.com'
 
-#TWITTER SETINGS
 
+#TWITTER SETINGS
 # Your access token: Access token
 TWITTER_OAUTH_TOKEN = '182486079-cH8lnyFVmQiSMmCOoztiOrUw5KRhE9569nMd3qxr'
 # Your access token: Access token secret

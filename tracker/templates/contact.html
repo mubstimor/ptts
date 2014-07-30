@@ -19,11 +19,11 @@
                     	<div class="span4">
                         	<h2 class="title"><span>Contact Info</span></h2>
                             <div id="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7525323230566!2d32.568204933868394!3d0.32902967999205185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8dce2ad21bcf6420!2sSchool+Of+Computing+and+Informatics+Technology!5e0!3m2!1sen!2s!4v1406104635706" width="100%" height="310" frameborder="0" style="border:0"></iframe>
+                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7525323230566!2d32.568204933868394!3d0.32902967999205185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8dce2ad21bcf6420!2sSchool+Of+Computing+and+Informatics+Technology!5e0!3m2!1sen!2s!4v1406104635706" width="100%" height="310" ></iframe></div>
                             <p>7062 Makerere<br/>Kampala, Uganda</p>
                             <p>Phone: 0-701-313-574<br/>Fax: 1-500-256-2768<br/>Email: <a href="mailto:#">info@tracker.com</a><br/>Web: <a href="#">http://tracker.com</a></p>
                         </div>
-                    	<div class="span7">
+                    	<div class="span7" style="float: left">
                         	<h2 class="title"><span>Get In Touch</span></h2>
                             <div class="contact_form">
                             	<div id="note"></div>
@@ -38,17 +38,6 @@
                                         <div class="clear"></div>
                                           </form>
 
-                                        <!--
-                                        <input class="span7" type="text" name="name" value="" placeholder="Name (required)" />
-                                        <input class="span7" type="text" name="email" value="" placeholder="Email (required)" />
-                                        <input class="span7" type="text" name="subject" value="" placeholder="Subject" />
-                                        <textarea name="message" id="message" class="span8" placeholder="Message"></textarea>
-                                        <div class="clear"></div>
-                                        <input type="reset" class="btn dark_btn" value="Clear form" />
-                                        <input type="submit" class="btn send_btn" value="Submit" />
-                                        <div class="clear"></div>
-                                    </form>
-                                    -->
                                 </div>
                             </div>
                         </div>
@@ -58,26 +47,3 @@
         </div>
 
 {% endblock %}
-{#    <script type="text/javascript">#}
-{#		$(document).ready(function(){	#}
-{#			$("#ajax-contact-form").submit(function() {#}
-{#				var str = $(this).serialize();		#}
-{#				$.ajax({#}
-{#					type: "POST",#}
-{#					url: "/contact.html",#}
-{#					data: str,#}
-{#					success: function(msg) {#}
-{#						// Message Sent - Show the 'Thank You' message and hide the form#}
-{#						if(msg == 'OK') {#}
-{#							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';#}
-{#							$("#fields").hide();#}
-{#						} else {#}
-{#							result = msg;#}
-{#						}#}
-{#						$('#note').html(result);#}
-{#					}#}
-{#				});#}
-{#				return false;#}
-{#			});															#}
-{#		});		#}
-{#	</script>#}

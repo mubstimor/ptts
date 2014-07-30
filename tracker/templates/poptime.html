@@ -28,6 +28,7 @@
                                     }
 
 
+                                //getCookie helps return the csrf token that is used in avoiding cross site referencing when a request is made to a server
                                      function getCookie(name) {
                                                 var cookieValue = null;
                                                 if (document.cookie && document.cookie != '') {
@@ -46,6 +47,7 @@
 
 
 
+                                //request for the bus' details using its ID
                                          $.ajax
                                         ({
                                         type: "GET",
@@ -96,54 +98,15 @@
                                   geocoder = new google.maps.Geocoder();
                                 }
 
-                                      //Get address of User's location
-{#                                    function codeLatLng() {#}
-{##}
-{#                                      var lat = parseFloat(document.getElementById(userlat));#}
-{#                                      var lng = parseFloat(document.getElementById(userlong));#}
-{#                                      var latlng = new google.maps.LatLng(lat, lng);#}
-{#                                      var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+userlat+','+userlong+'&sensor=true';#}
-{#                                        alert(url);#}
-{#                                        window.open(url);#}
-{##}
-{#                                     $.get(url, {}, function(res,resp) {#}
-{#                                         alert("function run");#}
-{#                                         // var j=1;#}
-{#                                              //  for(var i=0, len=res.length; i<len; i++) {#}
-{#                                                   // alert("u are at "+res[0].address_components[1].short_name);#}
-{#                                                //}#}
-{#                                         var loc;#}
-{#                                         for(var i in results[0].address_components){#}
-{#                                                console.log(results[0].address_components[i].short_name);#}
-{#                                             loc += results[0].address_components[i].short_name+" ";#}
-{#                                            }#}
-{#                                         alert(loc);#}
-{##}
-{#                                            }, "json");#}
-{#                                        }#}
-{#                                    codeLatLng();#}
-// calculateDistance(StopLat, StopLng)
 
-                                function calculateDistances() {
-                                  var service = new google.maps.DistanceMatrixService();
-                                  service.getDistanceMatrix(
-                                    {
-                                      origins: [origin1],
-                                      destinations: [destinationB],
-                                      travelMode: google.maps.TravelMode.DRIVING,
-                                      unitSystem: google.maps.UnitSystem.METRIC,
-                                      avoidHighways: false,
-                                      avoidTolls: false
-                                    }, callback);
-                                }
-
+                                //get driving distance between a bus and selected route stop
                                 function get_StopDistance(lat,lng) {
 
-{#                                    alert("stop of "+lat+" , "+lng+" and bus of "+buslat+", "+buslong);#}
+{#                                 alert("stop of "+lat+" , "+lng+" and bus of "+buslat+", "+buslong);#}
 
-                                    var busLocation;
-                                    var stopLocation;
-                                  var service = new google.maps.DistanceMatrixService();
+                                   var busLocation;
+                                   var stopLocation;
+                                   var service = new google.maps.DistanceMatrixService();
                                     stopLocation = new google.maps.LatLng(lat, lng);
                                     busLocation = new google.maps.LatLng(buslat, buslong);
                                   service.getDistanceMatrix(
@@ -157,39 +120,9 @@
                                     }, callback2);
                                 }
 
-                                function callback(response, status) {
-                                  if (status != google.maps.DistanceMatrixStatus.OK) {
-                                    alert('Error was: ' + status);
-                                  } else {
-                                    var origins = response.originAddresses;
-                                    var destinations = response.destinationAddresses;
-                                    var outputDiv = document.getElementById('outputDiv');
-                                    outputDiv.innerHTML = '';
-                                    deleteOverlays();
 
-                                    for (var i = 0; i < origins.length; i++) {
-                                      var results = response.rows[i].elements;
-                                      addMarker(origins[i], false);
-                                      for (var j = 0; j < results.length; j++) {
-
-                                         var googleTime = results[j].duration.text.substring(0,2).trim();
-                                         var distance = results[j].distance.text.substring(0,4).trim();
-
-                                          var pttsTime = (distance/speed) * 60;
-                                          var roundedOffTime = Math.round(pttsTime * 100) / 100;
-                                          var ceilTime = Math.ceil(roundedOffTime);
-
-                                        addMarker(destinations[j], true);
-                                        outputDiv.innerHTML += origins[i] + ' to ' + destinations[j]
-                                            + ': ' + results[j].distance.text + ' in '
-                                            + ceilTime + ' mins <br>';
-
-                                      }
-                                    }
-                                  }
-                                }
-
-                                  function callback2(response, status) {
+                                //function to write out the response from the Google Distance Matrix service
+                                function callback2(response, status) {
 
                                   if (status != google.maps.DistanceMatrixStatus.OK) {
                                     alert('Error was: ' + status);
@@ -201,8 +134,6 @@
 
                                     var outputDiv = document.getElementById('outputDiv');
 
-
-{#                                    outputDiv.innerHTML = 'Maurice';#}
                                     deleteOverlays();
                                     var k=0;
 
@@ -224,18 +155,13 @@
                                             + ': ' + results[j].distance.text + ' in '
                                             + ceilTime + ' minutes <br>';
 
-{#                                          alert("ceil "+ceilTime);#}
-{#                                          document.getElementById("row").innerHTML = ceilTime;#}
                                           k++;
-                                          //outputDiv.innerHTML += "New text!";
-                                          //innerHTML +=  ceilTime + ' minutes';
-                                          //return ceilTime +" minutes";
-
                                       }
                                     }
                                   }
                                 }
 
+                                //plots the markers to distinguish the origin from the destination
                                 function addMarker(location, isDestination) {
                                   var icon;
                                   if (isDestination) {
@@ -260,6 +186,7 @@
                                   });
                                 }
 
+                                //get route stops along a given route to enable users request for appropriate travel times for buses to get to them.
                                 function routestops(){
                                 //Load route stops basing on a given route
                                    $.ajax
@@ -284,7 +211,7 @@
 
                                     },
                                         error: function(xhr, textStatus, thrownError){
-    {#                                                        alert("xhr status: " + xhr.statusText);#}
+    {#                                        alert("xhr status: " + xhr.statusText);#}
                                         }
                                     });
                                 } //end func
@@ -299,8 +226,8 @@
                                 google.maps.event.addDomListener(window, 'load', initialize);
 
                                 $(function() {
-                                    calculateDistances();
-                                });
+                                    //removed
+                                        });
 
                             </script>
 
@@ -326,9 +253,8 @@
                                 <p>License Number : <span id="plate"></span> <br/>Travelling at <script>document.write(speed)</script> km/hr</p>
 
                             </pre>
-                            <p><button type="button" onclick="calculateDistances();">Calculate Time</button><br/></p>
-                            <div id="outputDiv"></div>
 
+                            <div id="outputDiv"></div>
 
                         </div>
 
@@ -348,13 +274,6 @@
                     </thead>
                     <tbody id="printHere">
 
-{#                    {% for route_stop in route_stops %}#}
-{#                      <tr>#}
-{#                        <td>{{ route_stop.id }}</td>#}
-{#                        <td>{{ route_stop.stop_name }}</td>#}
-{#                      <td>5mins</td>#}
-{#                      </tr>#}
-{#                    {% endfor %}#}
                     </tbody>
                   </table>
                         </div>
