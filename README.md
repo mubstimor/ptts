@@ -4,7 +4,10 @@ Tracking
 This will be the web-portal to the public transport tracking system. Its wirtten in django-python and will have apis from which other systems can access the data e.g the android application
 
 <h1>Screenshot<h1>
-http://smsme.info/android-sync/bus_location.png
+.. image:: http://smsme.info/android-sync/bus_location.png
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
 
 
 <h1>Dependencies</h1>
