@@ -5,6 +5,7 @@ This will be the web-portal to the public transport tracking system. Its wirtten
 
 <h1>Screenshot<h1>
 ![Alt text](http://smsme.info/android-sync/bus_location.png "Optional title")
+http://raw.github.com/mubstimor/ptts/static/Screenshots/Settings.png
 
 <h1>Dependencies</h1>
 <ul>
